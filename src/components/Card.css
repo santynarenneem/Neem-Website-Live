@@ -1,0 +1,28 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 400px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .card-img{
+    border-radius: 50px;
+    height: 150px;
+  }
+  .Header{
+    font-size: 30px;
+    color: #000;
+    font-weight: 400;
+    padding: 20px;
+  }
+.Content{
+  padding: 40px;
+  line-height: 30px;
+  color: #000;
+  font-weight: 300;
+
+}
