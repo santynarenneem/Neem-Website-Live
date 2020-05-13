@@ -9,8 +9,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Hello Entusiasts ! We are currently Under Development </h1>
-    
-    
+
+
     <Link to="/Portfolio/">Client Showcase</Link>
     <Link to="/AboutUs/">About Us</Link>
     <Link to="/Resourcing/">Resourcing</Link>
