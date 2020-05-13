@@ -26,7 +26,21 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-        
+        <Link style={{
+          marginLeft: 20, color: `white`
+        }} to="/Portfolio/">Client Showcase</Link>
+    <Link style={{
+      marginLeft: 20, color: `white`
+    }} to="/AboutUs/">About Us</Link>
+    <Link style={{
+      marginLeft: 20, color: `white`
+    }} to="/Resourcing/">Resourcing</Link>
+    <Link style={{
+      marginLeft: 20, color: `white`
+    }} to="/Development/">Development</Link>
+    <Link style={{
+      marginLeft: 20, color: `white`
+    }} to="/Consulting/">Consulting</Link>
       </h1>
     </div>
   </header>
