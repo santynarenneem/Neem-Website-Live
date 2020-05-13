@@ -3,7 +3,7 @@ import './Card.css'
 function CardMid(props) {
     return (
         <div className="card">
-            <center><img className="card-img" src={props.img}/></center>
+            <center><img  alt={props.title}className="card-img" src={props.img}/></center>
            <center> <div className="Header">
             {props.title}
             </div></center>

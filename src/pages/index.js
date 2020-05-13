@@ -2,19 +2,20 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/Portfolio/">Go to page 2</Link>
+    <h1>Hello Entusiasts ! We are currently Under Development </h1>
+    
+    
+    <Link to="/Portfolio/">Client Showcase</Link>
+    <Link to="/AboutUs/">About Us</Link>
+    <Link to="/Resourcing/">Resourcing</Link>
+    <Link to="/Development/">Development</Link>
+    <Link to="/Consulting/">Consulting</Link>
   </Layout>
 )
 

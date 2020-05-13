@@ -1,12 +1,13 @@
 import React from 'react'
 import {  graphql } from "gatsby"
-import CardMid from '../components/CardMid';
+
 import '../assets/bluma.css'
+import Card from '../components/Card';
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 
 import BigCard from '../components/BigCard';
-const AboutUs = ({data , headerData}) => (
+const Development = ({data , headerData}) => (
 <div>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
@@ -20,16 +21,12 @@ const AboutUs = ({data , headerData}) => (
   </div>
 ))}
 <Grid container  spacing={2} >
-{data.allSanityService.edges.map(client=>(
-
-
-
-    <Grid item md={4}xs={12}   key={client.node._id}>
-
-{console.log(client.node._rawBody[0])}
-    <CardMid title={client.node.service_title} img={client.node.image1.asset.url} content={client.node._rawBody[0].children[0].text} />
+{data.allSanityClient.edges.map(client=>(
+    <Grid item md={3}xs={12}>
+    <div key={client.node.id} >
+    <Card title={client.node.name} img={client.node.image1.asset.url}/>
     <br/>
-
+    </div>
     </Grid>
 
        ))}
@@ -38,9 +35,8 @@ const AboutUs = ({data , headerData}) => (
 </div>
 
 )
-export const data =
-graphql`
-    query MyQueryandMyQuery {
+export const data = graphql`
+    query MyQueryandMyQueryandMyQueryandMyQuery {
       allSanityService(filter: {service_title: {in: ["Development","Resourcing","Consulting"]}}) {
         edges {
           node {
@@ -55,7 +51,7 @@ graphql`
           }
         }
       },
-        allSanityHeaderSmall(filter: {pageText: {eq: "About Us"}}) {
+        allSanityHeaderSmall(filter: {pageText: {eq: "Client"}}) {
             edges {
               node {
                 id
@@ -71,7 +67,21 @@ graphql`
 
             }
         },
-        allSanityDetail(filter: {pageHeader: {in: "About Us"}}) {
+        allSanityClient {
+            edges {
+              node {
+                  id
+                name
+                  image1{
+                      asset{
+                          url
+                      }
+                  }
+              }
+            }
+          },
+
+        allSanityDetail(filter: {pageHeader: {in: "Development"}}) {
           edges {
             node {
               id
@@ -91,4 +101,4 @@ graphql`
 
   `
 
-export default AboutUs
+export default Development
