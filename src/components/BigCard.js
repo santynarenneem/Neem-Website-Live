@@ -5,7 +5,7 @@ function BigCard(props) {
     return (
         <Grid container>
             <Grid item md={6} xs={12}>
-                <img src={props.img} alt="image"/>
+                <img src={props.img} alt="Impactful"/>
             </Grid>
             <Grid className="right"item md={6} xs={12}>
                 <h1 className="header">{props.title}</h1>
