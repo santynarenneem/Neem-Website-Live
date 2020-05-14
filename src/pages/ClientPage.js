@@ -4,7 +4,7 @@ import CardMid from '../components/Card'
 import Desc from '../components/Desc'
 import Grid from '@material-ui/core/Grid';
 function ClientPage({data}) {
-    {console.log({data})}
+
     return (
         <div>
             <HeaderSmall text={data.sanityClient.name} breadcrumb={data.sanityClient.name}/>
@@ -28,7 +28,7 @@ function ClientPage({data}) {
     )
 }
 export const data = graphql `
-query ($pagePath :String!) {
+query ($pagePath :String) {
 sanityClient(slug: {current: {eq: $pagePath}}){
 name
 _rawBody

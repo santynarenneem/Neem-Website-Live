@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Card from '../components/Card';
 import SEO from "../components/seo"
-import {  graphql } from "gatsby"
+import { graphql } from "gatsby"
 import CardMid from '../components/CardMid';
 import '../assets/bluma.css'
 import Grid from '@material-ui/core/Grid';

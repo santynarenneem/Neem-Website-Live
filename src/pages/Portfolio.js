@@ -1,5 +1,5 @@
 import React from 'react'
-import {  graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Card from '../components/Card';
 import { Link } from "gatsby"
 import '../assets/bluma.css'
