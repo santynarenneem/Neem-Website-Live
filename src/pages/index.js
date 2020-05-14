@@ -8,21 +8,25 @@ import { graphql } from "gatsby"
 import CardMid from '../components/CardMid';
 import '../assets/bluma.css'
 import Grid from '@material-ui/core/Grid';
-import HeaderSmall from '../components/HeaderSmall';
-
+import HeaderBig from '../components/HeroBig';
+import DescHead from '../components/DescHead';
+import Desc from '../components/Desc';
 import BigCard from '../components/BigCard';
 const IndexPage = ({data}) => (
-  <Layout>
+ <div>
     <SEO title="Home" />
     {data.allSanityHeaderBig.edges.map(headersmall=>(
       <div  key={headersmall.node.id}>
 
-        <HeaderSmall text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.url}/>
+        <HeaderBig text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.url}/>
         </div>
     ))}
 
-    <h1>Hello Entusiasts ! We are currently Under Development </h1>
+    <DescHead text={"Big enough to make real impact. Small enough to move fast."}/>
+    <Desc text={"At Neem Consulting we always punch above our weight, challenging bigger competitors on both value and speed. We are big enough to take on the industry's heavy hitters, but small enough to be nimble and flexible - while never scrimping on quality."}/>
 <Grid container  spacing={2} >
+
+
 {data.allSanityService.edges.map(client=>(
 
 
@@ -36,6 +40,7 @@ const IndexPage = ({data}) => (
     </Grid>
 
        ))}
+      
 </Grid>
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
@@ -69,7 +74,7 @@ marginLeft: 20, color: `orange`
 <Link style={{
 marginLeft: 20, color: `orange`
 }} to="/Consulting/">Consulting</Link>
-  </Layout>
+</div>
 )
 export const data = graphql`
     query MyQueryandMyQuery2 {

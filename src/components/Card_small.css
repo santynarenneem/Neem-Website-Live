@@ -30,11 +30,11 @@
 	font-style: normal;
 }
 
-.card {
+.card-small {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 400px;
-    margin-left:40px;
+   
     height: 450px;
   }
 
@@ -42,12 +42,15 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
-  .card-img{
-    padding-top:30px;
-    padding-left:30px;
-    padding-right:30px;
+  .card-img-small{
+    width: 100%;
+    display: block;
+    height: 100%;
    
-    height: 180px;
+    
+  }
+  .card-img-small:hover {
+    opacity: 0.5;
   }
   .Header{
     font-size: 30px;
@@ -56,13 +59,21 @@
     font-family: 'proxima_nova_rgbold' , sans-serif ;
     
   }
-.Content{
-  padding: 10px;
-  padding-left:30px;
-  padding-right:30px;
-  line-height: 30px;
-  text-align:center;
-  color: #424143;
-  font-weight: 300;
+.content-small-card{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  opacity:0;
+   
+}
+
+.card-small-image{
+    position:relative;
+
+}
+.card-small-image:hover .content-small-card{
+   opacity:1;
 
 }

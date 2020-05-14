@@ -1,18 +1,15 @@
 import React from 'react'
 
-import '../assets/bluma.css'
+import './Card_small.css'
 const Card = (props) => {
     return (
-        <div className="card">
-            <figure className="image is-4by3">
-                <img alt="client_image" src={props.img}/>
-            </figure>
-
-            <div className="card-content">
-                <p class="title is-4">
-                    {props.title}</p>
+        <div>
+          <div className="card-small-image">
+                <img className="card-img-small"alt="client_image" src={props.img}/>
+      <span className="content-small-card">   {props.title}</span>
+</div>
             </div>
-        </div>
+      
     )
 }
 
