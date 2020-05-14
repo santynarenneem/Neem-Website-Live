@@ -12,6 +12,14 @@ import HeaderBig from '../components/HeroBig';
 import DescHead from '../components/DescHead';
 import Desc from '../components/Desc';
 import BigCard from '../components/BigCard';
+import Slider from "react-slick";
+var settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
 const IndexPage = ({data}) => (
  <div>
     <SEO title="Home" />
@@ -40,7 +48,7 @@ const IndexPage = ({data}) => (
     </Grid>
 
        ))}
-      
+
 </Grid>
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
@@ -48,6 +56,7 @@ const IndexPage = ({data}) => (
   </div>
 ))}
 <Grid container  spacing={2} >
+
 {data.allSanityClient.edges.map(client=>(
     <Grid item md={3}xs={12}>
     <div key={client.node.id} >
