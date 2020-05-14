@@ -46,8 +46,9 @@ const IndexPage = ({data}) => (
 {data.allSanityClient.edges.map(client=>(
     <Grid item md={3}xs={12}>
     <div key={client.node.id} >
-    <Card title={client.node.name} img={client.node.image1.asset.url}/>
-    <br/>
+   <Link to={'/project/'+client.node.slug.current+''}> <Card title={client.node.name} img={client.node.image1.asset.url}/>
+   </Link>
+   <br/>
     </div>
     </Grid>
 
@@ -122,6 +123,9 @@ export const data = graphql`
             node {
                 id
               name
+              slug{
+                current
+              }
                 image1{
                     asset{
                         url
