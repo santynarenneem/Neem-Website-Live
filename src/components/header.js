@@ -1,55 +1,34 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import './headerNav.css'
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: '#000000ed',
 
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-        <Link style={{
-          marginLeft: 20, color: `white`
-        }} to="/Portfolio/">Client Showcase</Link>
-    <Link style={{
-      marginLeft: 20, color: `white`
-    }} to="/AboutUs/">About Us</Link>
-    <Link style={{
-      marginLeft: 20, color: `white`
-    }} to="/Resourcing/">Resourcing</Link>
-    <Link style={{
-      marginLeft: 20, color: `white`
-    }} to="/Development/">Development</Link>
-    <Link style={{
-      marginLeft: 20, color: `white`
-    }} to="/Consulting/">Consulting</Link>
-      </h1>
-    </div>
-  </header>
+<div className="topnav" id="myTopnav">
+<a href="#home" class="active">Home</a>
+<a href="#news">News</a>
+<a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a className="icon" onClick={myFunction}>
+ Menu
+</a>
+</div>
+
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
-
+function myFunction(e) {
+  e.preventDefault();
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 Header.defaultProps = {
   siteTitle: ``,
 }
