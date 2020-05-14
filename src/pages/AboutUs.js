@@ -4,10 +4,11 @@ import CardMid from '../components/CardMid';
 import '../assets/bluma.css'
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
-
+import Header from '../components/header';
 import BigCard from '../components/BigCard';
 const AboutUs = ({data , headerData}) => (
 <div>
+<Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
 
