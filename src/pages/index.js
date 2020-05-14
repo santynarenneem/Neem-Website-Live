@@ -6,19 +6,50 @@ import Card from '../components/Card';
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import CardMid from '../components/CardMid';
-import '../assets/bluma.css'
+
 import Grid from '@material-ui/core/Grid';
 import HeaderBig from '../components/HeroBig';
 import DescHead from '../components/DescHead';
 import Desc from '../components/Desc';
 import BigCard from '../components/BigCard';
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 var settings = {
   dots: true,
-  infinite: true,
+  infinite: false,
   speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
+  arrows:true,
+
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 };
 const IndexPage = ({data}) => (
  <div>
@@ -55,19 +86,24 @@ const IndexPage = ({data}) => (
 <BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
-<Grid container  spacing={2} >
+<Slider style={{margin:20}}{...settings}>
+
+
+
 
 {data.allSanityClient.edges.map(client=>(
-    <Grid item md={3}xs={12}>
+
     <div key={client.node.id} >
    <Link to={'/project/'+client.node.slug.current+''}> <Card title={client.node.name} img={client.node.image1.asset.url}/>
    </Link>
    <br/>
     </div>
-    </Grid>
+
 
        ))}
-</Grid>
+
+
+</Slider>
 <Link style={{
   marginLeft: 20, color: `orange`
 }} to="/Portfolio/">Client Showcase</Link>

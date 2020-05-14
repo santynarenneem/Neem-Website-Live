@@ -5,8 +5,46 @@ import '../assets/bluma.css'
 import Card from '../components/Card';
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import BigCard from '../components/BigCard';
+var settings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  arrows:true,
+
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+};
 const Development = ({data , headerData}) => (
 <div>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
@@ -20,18 +58,18 @@ const Development = ({data , headerData}) => (
 <BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
-<Grid container  spacing={2} >
+<Slider style={{margin:20}}{...settings}>
 {data.allSanityClient.edges.map(client=>(
-    <Grid item md={3}xs={12}>
+
     <div key={client.node.id} >
     <Link  to={'/project/'+client.node.slug.current+''}><Card title={client.node.name} img={client.node.image1.asset.url}/>
     </Link>
     <br/>
     </div>
-    </Grid>
+
 
        ))}
-</Grid>
+       </Slider>
 
 </div>
 
