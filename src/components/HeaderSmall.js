@@ -1,20 +1,12 @@
 import React from 'react'
-import '../assets/bluma.css'
+import './Hero.css'
 function HeaderSmall(props) {
     return (
         <div>
-        <section className="hero is-medium is-primary is-bold">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">
-              {props.text}
-            </h1>
-            <h2 className="subtitle">
-              {props.breadcrumb}
-            </h2>
-          </div>
-        </div>
-      </section>
+        <div className="hero-small-image">
+        <img className="hero-img-small"alt="client_image" src={props.img}/>
+<span className="content-small-hero">   {props.text}</span>
+</div>
         </div>
     )
 }
