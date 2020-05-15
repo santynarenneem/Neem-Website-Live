@@ -7,13 +7,13 @@ import Logo from '../assets/media/logowhite.png'
 const Header = ({siteTitle}) => (
 
     <div className="navbar-topnav" id="navbar-topnav-id">
-        <a ><Link to="/"><img  className="navbar-topnav-img" src={Logo}/></Link></a>
+        <a ><Link to="/" ><img  className="navbar-topnav-img" src={Logo}/></Link></a>
         <a ><Link to="/">Home</Link></a>
         <a><Link to="/AboutUs">About Us</Link></a>
         <a><Link to="/Portfolio">Client Showcase</Link></a>
         <a ><Link to="/ContactUs">Contact</Link></a>
-        <a className="navbar-icon" onClick={myFunction}>
-            Menu
+        <a className="navbar-icon" onClick={mobileMenu}>
+            <Link>Menu</Link>
         </a>
     </div>
 
@@ -22,10 +22,12 @@ const Header = ({siteTitle}) => (
 Header.propTypes = {
     siteTitle: PropTypes.string
 }
-function myFunction(e) {
+function mobileMenu(e) {
     e.preventDefault();
     var x = document.getElementById("navbar-topnav-id");
+
     if (x.className === "navbar-topnav") {
+
         x.className += " responsive";
     } else {
         x.className = "navbar-topnav";

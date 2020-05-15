@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
 import Footer from '../components/Footer';
-import BigCard from '../components/BigCard';
+import Desc from '../components/Desc';
 const ContactUs = ({data , headerData}) => (
 <div>
 <Header/>
@@ -18,23 +18,38 @@ const ContactUs = ({data , headerData}) => (
 ))}
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
-<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
+<Desc  text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
 <Grid container  spacing={2} >
-{data.allSanityService.edges.map(client=>(
 
 
 
-    <Grid item md={4}xs={12}   key={client.node._id}>
 
-{console.log(client.node._rawBody[0])}
-    <CardMid title={client.node.service_title} img={client.node.image1.asset.url} content={client.node._rawBody[0].children[0].text} />
-    <br/>
+    <Grid item md={4}xs={12}  >
+
+
+    <CardMid title="Call us!" img="" content="+44 207 097 8760" />
+
+
+    </Grid>
+    <Grid item md={4}xs={12}  >
+
+
+    <CardMid title="Drop us a note!" img="" content="contact@neemconsulting.com" />
+
+
+    </Grid>
+    <Grid item md={4}xs={12}  >
+
+
+    <CardMid title="Pop In !" img="" content="Venture Point, Ellesmere Port CH2 4NE" />
+
 
     </Grid>
 
-       ))}
+
+
 </Grid>
 <Footer/>
 </div>
@@ -42,7 +57,7 @@ const ContactUs = ({data , headerData}) => (
 )
 export const data = graphql`
     query MyQueryandMyQueryandContactQuery {
-      allSanityService(filter: {service_title: {in: ["Development","Resourcing","Consulting"]}}) {
+      allSanityService(filter: {service_title: {in: ["Pop in!","Drop us a note!","Call us!"]}}) {
         edges {
           node {
             _id
@@ -56,7 +71,7 @@ export const data = graphql`
           }
         }
       },
-        allSanityHeaderSmall(filter: {pageText: {eq: "About Us"}}) {
+        allSanityHeaderSmall(filter: {pageText: {eq: "Contact Us"}}) {
             edges {
               node {
                 id
@@ -72,7 +87,7 @@ export const data = graphql`
 
             }
         },
-        allSanityDetail(filter: {pageHeader: {in: "About Us"}}) {
+        allSanityDetail(filter: {pageHeader: {in: "Contact Us"}}) {
           edges {
             node {
               id

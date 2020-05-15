@@ -68,7 +68,7 @@ const IndexPage = ({data}) => (
     <Grid container item md={12} xs={12}>
     <Desc text={"At Neem Consulting we always punch above our weight, challenging bigger competitors on both value and speed. We are big enough to take on the industry's heavy hitters, but small enough to be nimble and flexible - while never scrimping on quality."}/>
    </Grid>
-    <Grid container item md={12} xs={12} >
+    <Grid container item md={12} xs={12} spacing={1}>
 
 
 {data.allSanityService.edges.map(client=>(
