@@ -1,7 +1,7 @@
 import React from 'react'
 import {  graphql } from "gatsby"
 import CardMid from '../components/CardMid';
-import '../assets/bluma.css'
+
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';

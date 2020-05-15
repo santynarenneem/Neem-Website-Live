@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Card from '../components/Card';
 import { Link } from "gatsby"
-import '../assets/bluma.css'
+
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Desc from '../components/Desc';

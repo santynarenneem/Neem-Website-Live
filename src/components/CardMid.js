@@ -1,16 +1,23 @@
 import React from 'react'
-import './Card.css'
+import '../assets/css/styles.css';
+import Grid from '@material-ui/core/Grid';
 function CardMid(props) {
     return (
-        <div className="card">
-            <center><img  alt={props.title}className="card-img" src={props.img}/></center>
-           <center> <div className="Header">
-            {props.title}
-            </div></center>
-            <div className="Content">
-            {props.content}
-            </div>
-        </div>
+        <Grid>
+            <Grid item md={12} xs={12}>
+                <div className="card-mid-div">
+                    <center><img className="card-mid-img" alt={props.title} src={props.img}/></center>
+                    <center>
+                        <div className="card-mid-header">
+                            {props.title}
+                        </div>
+                    </center>
+                    <div className="card-mid-content">
+                        {props.content}
+                    </div>
+                </div>
+            </Grid>
+        </Grid>
     )
 }
 

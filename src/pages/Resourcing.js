@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, graphql } from "gatsby"
 
-import '../assets/bluma.css'
+
 import Card from '../components/Card';
-import Grid from '@material-ui/core/Grid';
+
 import HeaderSmall from '../components/HeaderSmall';
 
 import BigCard from '../components/BigCard';

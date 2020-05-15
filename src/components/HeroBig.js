@@ -1,27 +1,46 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
-import './styles.css'
+import '../assets/css/styles.css';
 import Video from '../assets/media/Hop-Software-Gowing-Plan-720p.mp4'
 function HeaderBig(props) {
     return (
         <div>
-        <Grid container >
-        <Grid item md={12} xs={12}>
-         <video autoPlay muted loop id="myVideo">
-                <source src={Video} type="video/mp4"/>
-            </video>
-        </Grid>
+            <Grid container>
+                <Grid item md={12} xs={12}>
+                    <video id="homepage-hero-video" autoPlay muted loop >
+                        <source xs={12}src={Video} id="homepage-hero-video-src"  type="video/mp4"/>
+                    </video>
+                </Grid>
 
-        </Grid>
+          {/*    <Grid item md={12} xs={12}>
+                    <center>
+                        <span className="homepage-hero-tags-w">We Are</span>
+                    </center>
+                </Grid>
 
-            <div className="content">
-            <center><span className="tags-w">We Are</span></center>
-                <span  className="h1text">{props.text}</span>
-                <p>{props.breadcrumb}</p>
-                <center><span className="tags-d">Development</span><span className="tags-c">Consulting</span><span className="tags-r">Resourcing</span></center>
+                <Grid item md={12} xs={12}>
+                    <center>
+                        <span className="homepage-hero-header-text">{props.text}</span>
+                    </center>
+                </Grid>
 
-            </div>
+                <Grid item md={4} xs={12}>
+                    <center>
+                        <span className="homepage-hero-tags-d">Development</span>
+                    </center>
+                </Grid>
+                <Grid item md={4} xs={12}>
+                    <center>
+                        <span className="homepage-hero-tags-c">Consulting</span>
+                    </center>
+                </Grid>
+                <Grid item md={4} xs={12}>
+                    <center>
+                        <span className="homepage-hero-tags-r">Resourcing</span>
+                    </center>
+    </Grid> */}
 
+            </Grid>
         </div>
     )
 }

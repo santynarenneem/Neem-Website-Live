@@ -1,19 +1,21 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
-import './BigCard.css'
+import '../assets/css/styles.css';
 function BigCard(props) {
     return (
         <Grid container>
             <Grid item md={6} xs={12}>
-                <img src={props.img} alt="Impactful"/>
+                <img src={props.img} className="big-card-image" alt="Impactful"/>
             </Grid>
-            <Grid className="right"item md={6} xs={12}>
-                <h1 className="header">{props.title}</h1>
-                <h6 className="tagline">{props.tagline}</h6>
-                <p className="content-big-card">{props.text}</p>
+            <Grid item md={6} xs={12}>
+                <div className="big-card-right">
+                    <h1 className="big-card-header">{props.title}</h1>
+                    <h6 className="big-card-tagline">{props.tagline}</h6>
+                    <p className="big-card-content">{props.text}</p>
+                </div>
             </Grid>
-
         </Grid>
+
     )
 }
 

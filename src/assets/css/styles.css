@@ -1,0 +1,354 @@
+/* Fonts Used */
+
+@font-face {
+	font-family: 'proxima_nova_rgregular';
+	src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+	src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'proxima_nova_rgbold';
+	src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+	src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+		 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+ overflow-x: hidden;
+}
+
+
+
+
+  /* Desc Small Component CSS*/
+  .desc-small-content-text{
+    font-size:20px;
+    color:#424143;
+    font-family: 'proxima_nova_rgregular'
+  }
+  .desc-small-div{
+
+    width:100%;
+    text-align:center;
+  }
+
+  /* Desc Big Component CSS */
+  .desc-big-head-div{
+
+    width:100%;
+    text-align:center;
+
+  }
+  .desc-big-header{
+     font-weight:bold;
+      font-size:30px;
+      color:#424143;
+      font-family: 'proxima_nova_rgbold'
+  }
+
+
+  /*Homepage Hero Component CSS*/
+
+/* Video Background */
+#homepage-hero-video {
+    background: rgba(0, 0, 0, 0.9);
+    /* margin-top: -30px; */
+    width:100%;
+  /* position: absolute; */
+    left: 0;
+    right: 0;
+    opacity: 0.88;
+    bottom: 0;
+    /* z-index: -1; */
+
+
+  }
+
+
+
+  .homepage-hero-header-text{
+      color: #fff;
+      font-weight: bold;
+      font-family: 'proxima_nova_rgbold' , sans-serif ;
+      font-size: 100px;
+      text-transform: uppercase;
+      font-stretch: expanded;
+  }
+.homepage-hero-tags-c{
+    color:#DD4027;
+    font-weight: bold;
+    font-family: 'proxima_nova_rgbold' , sans-serif ;
+    font-size: 50px;
+    margin: 20px;
+
+}
+.homepage-hero-tags-d{
+    color:#A0CE4E;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'proxima_nova_rgbold' , sans-serif ;
+    font-size: 50px;
+    margin: 20px;
+
+}
+.homepage-hero-tags-r{
+    color:#A0CE4E;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'proxima_nova_rgbold' , sans-serif ;
+    font-size: 50px;
+    margin: 20px;
+
+}
+.homepage-hero-tags-w{
+    color:#fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'proxima_nova_rgbold' , sans-serif ;
+    font-size: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 20px;
+    text-transform: uppercase
+
+}
+
+/*Big Card Css*/
+
+
+.big-card-header{
+  color: #424143;
+  font-size: 40px;
+  font-weight: 500;
+  padding: 50px;
+  font-family: 'proxima_nova_rgbold' , sans-serif ;
+}
+.big-card-right{
+  padding: 20px;
+}
+.big-card-tagline{
+  color: #DD4027;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: 'proxima_nova_rgbold' , sans-serif ;
+  font-weight: 500;
+}
+.big-card-content{
+  color: #424143;
+  font-size: 20px;
+  padding-top:30px;
+  font-family: 'proxima_nova_rgregular' , sans-serif ;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.big-card-image{
+  width: 100%;
+}
+/*From Hero Css*/
+
+
+
+.hero-small-img{
+  width: 100%;
+  display: block;
+  height: 400px;
+
+
+}
+
+
+.hero-small-content{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'proxima_nova_rgbold';
+  transform: translate(-50%, -50%);
+opacity:1;
+
+}
+
+.hero-small-image{
+  position:relative;
+
+}
+
+/*Header Nav Css*/
+
+
+
+.navbar-topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar-topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar-topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.navbar-topnav .icon {
+  display: none;
+}
+
+/*Header Css*/
+
+.hero-section-neem{
+  background-image: url("https://neemconsulting.com/wp-content/uploads/2020/03/logowhite.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Card Mid Component Css*/
+
+
+.card-mid-div {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+
+  height: 450px;
+}
+
+.card-mid-div:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-mid-img{
+  padding-top:30px;
+  padding-left:30px;
+  padding-right:30px;
+
+  height: 180px;
+}
+.card-mid-header{
+  font-size: 30px;
+  color: #424143;
+  font-weight: 400;
+  font-family: 'proxima_nova_rgbold' , sans-serif ;
+
+}
+.card-mid-content{
+padding: 10px;
+padding-left:30px;
+padding-right:30px;
+line-height: 30px;
+text-align:center;
+color: #424143;
+font-weight: 300;
+font-family: 'proxima_nova_rgregular'
+}
+
+
+/*Card Small Component Css*/
+
+.card-small-img{
+  width: 100%;
+  display: block;
+  height: 100%;
+
+
+}
+.card-small-img:hover {
+  opacity: 0.5;
+}
+
+.card-small-content{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+opacity:0;
+font-family: 'proxima_nova_rgregular'
+
+}
+
+.card-small-div{
+  position:relative;
+
+}
+.card-small-div:hover .content-small-card{
+ opacity:1;
+
+}
+
+/*Media Queries*/
+
+
+  @media only screen and (max-width: 600px) {
+
+
+      #homepage-hero-video{
+
+
+        width: 100%;
+
+      }
+
+      .homepage-hero-header-text{
+
+        font-size: 20px;
+      }
+      .homepage-hero-tags-c{
+        font-size: 10px;
+      }
+      .homepage-hero-tags-r{
+        font-size: 10px;
+      }
+      .homepage-hero-tags-w{
+        font-size: 10px;
+      }
+      .homepage-hero-tags-d{
+        font-size: 10px;
+      }
+
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar-topnav a:not(:first-child) {display: none;}
+    .navbar-topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar-topnav.responsive {position: relative;}
+    .navbar-topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar-topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+

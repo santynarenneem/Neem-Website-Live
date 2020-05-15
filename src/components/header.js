@@ -1,36 +1,36 @@
-import { Link } from "gatsby"
+import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import './headerNav.css'
+import '../assets/css/styles.css'
 
-const Header = ({ siteTitle }) => (
+const Header = ({siteTitle}) => (
 
-<div className="topnav" id="myTopnav">
-<a href="#home" class="active">Home</a>
-<a href="#news">News</a>
-<a href="#contact">Contact</a>
-<a href="#about">About</a>
-<a className="icon" onClick={myFunction}>
- Menu
-</a>
-</div>
+    <div className="navbar-topnav" id="navbar-topnav-id">
+        <a  className="active">Home</a>
+        <a >News</a>
+        <a>Contact</a>
+        <a >About</a>
+        <a className="navbar-icon" onClick={myFunction}>
+            Menu
+        </a>
+    </div>
 
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string
 }
 function myFunction(e) {
-  e.preventDefault();
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+    e.preventDefault();
+    var x = document.getElementById("navbar-topnav-id");
+    if (x.className === "navbar-topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar-topnav";
+    }
 }
 Header.defaultProps = {
-  siteTitle: ``,
+    siteTitle: ``
 }
 
 export default Header

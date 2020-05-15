@@ -52,18 +52,21 @@ var settings = {
   ]
 };
 const IndexPage = ({data}) => (
- <div>
-    <SEO title="Home" />
-    {data.allSanityHeaderBig.edges.map(headersmall=>(
+ <Grid container>
+   <Grid item md={12} xs={12}>    {data.allSanityHeaderBig.edges.map(headersmall=>(
       <div  key={headersmall.node.id}>
 
         <HeaderBig text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.url}/>
         </div>
     ))}
-
+    </Grid>
+<Grid container item md={12} xs={12}>
     <DescHead text={"Big enough to make real impact. Small enough to move fast."}/>
+    </Grid>
+    <Grid container item md={12} xs={12}>
     <Desc text={"At Neem Consulting we always punch above our weight, challenging bigger competitors on both value and speed. We are big enough to take on the industry's heavy hitters, but small enough to be nimble and flexible - while never scrimping on quality."}/>
-<Grid container  spacing={2} >
+   </Grid>
+    <Grid container item md={12} xs={12} >
 
 
 {data.allSanityService.edges.map(client=>(
@@ -81,11 +84,14 @@ const IndexPage = ({data}) => (
        ))}
 
 </Grid>
+<Grid item md={12} xs={12}>
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
 <BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
+</Grid>
+<Grid item md={12} xs={12}>
 <Slider style={{margin:20}}{...settings}>
 
 
@@ -104,6 +110,8 @@ const IndexPage = ({data}) => (
 
 
 </Slider>
+</Grid>
+<Grid item md={12} xs={12}>
 <Link style={{
   marginLeft: 20, color: `orange`
 }} to="/Portfolio/">Client Showcase</Link>
@@ -119,7 +127,8 @@ marginLeft: 20, color: `orange`
 <Link style={{
 marginLeft: 20, color: `orange`
 }} to="/Consulting/">Consulting</Link>
-</div>
+</Grid>
+</Grid>
 )
 export const data = graphql`
     query MyQueryandMyQuery2 {

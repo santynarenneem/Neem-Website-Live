@@ -2,8 +2,8 @@ import React from 'react'
 import { Link , graphql } from "gatsby"
 
 import Card from '../components/Card';
-import '../assets/bluma.css'
-import Grid from '@material-ui/core/Grid';
+
+
 import HeaderSmall from '../components/HeaderSmall';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

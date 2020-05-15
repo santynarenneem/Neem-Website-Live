@@ -1,15 +1,16 @@
 import React from 'react'
 
-import './Card_small.css'
+import '../assets/css/styles.css';
 const Card = (props) => {
     return (
         <div>
-          <div className="card-small-image">
-                <img className="card-img-small"alt="client_image" src={props.img}/>
-      <span className="content-small-card">   {props.title}</span>
-</div>
+            <div className="card-small-div">
+                <img className="card-small-img" alt="client_image" src={props.img}/>
+                <span className="card-small-content">
+                    {props.title}</span>
             </div>
-      
+        </div>
+
     )
 }
 

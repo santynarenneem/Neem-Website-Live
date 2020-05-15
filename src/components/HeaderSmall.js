@@ -1,12 +1,13 @@
 import React from 'react'
-import './Hero.css'
+import '../assets/css/styles.css'
 function HeaderSmall(props) {
     return (
         <div>
-        <div className="hero-small-image">
-        <img className="hero-img-small"alt="client_image" src={props.img}/>
-<span className="content-small-hero">   {props.text}</span>
-</div>
+            <div className="hero-small-image">
+                <img className="hero-small-img" alt="client_image" src={props.img}/>
+                <span className="hero-small-content">
+                    {props.text}</span>
+            </div>
         </div>
     )
 }
