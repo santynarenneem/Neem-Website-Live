@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Card from '../components/Card';
 import { Link } from "gatsby"
 import Header from '../components/header';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Desc from '../components/Desc';

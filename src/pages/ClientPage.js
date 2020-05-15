@@ -4,7 +4,7 @@ import CardMid from '../components/Card'
 import Desc from '../components/Desc'
 import DescHead from '../components/DescHead'
 import Header from '../components/header';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import Grid from '@material-ui/core/Grid';
 function ClientPage({data}) {
 

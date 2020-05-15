@@ -5,7 +5,7 @@ import CardMid from '../components/CardMid';
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import BigCard from '../components/BigCard';
 const AboutUs = ({data , headerData}) => (
 <div>

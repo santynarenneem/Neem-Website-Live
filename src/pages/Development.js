@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from "gatsby"
 
 import Header from '../components/header';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import Card from '../components/Card';
 
 import HeaderSmall from '../components/HeaderSmall';
