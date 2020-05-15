@@ -6,8 +6,11 @@ const Card = (props) => {
         <div>
             <div className="card-small-div">
                 <img className="card-small-img" alt="client_image" src={props.img}/>
-                <span className="card-small-content">
-                    {props.title}</span>
+                <div className="card-small-content-overlay">
+                    <span className="card-small-content">
+                        {props.title}</span>
+                </div>
+
             </div>
         </div>
 

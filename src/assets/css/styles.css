@@ -275,17 +275,32 @@ font-family: 'proxima_nova_rgregular'
 
 }
 .card-small-img:hover {
-  opacity: 0.5;
+
+}
+.card-small-content-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #000000ae;
 }
 
 .card-small-content{
-
+  color: white;
+  font-size: 40px;
   position: absolute;
+  font-family: 'proxima_nova_rgbold';
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-opacity:0;
-font-family: 'proxima_nova_rgregular'
+  text-align: center;
 
 }
 
@@ -293,8 +308,10 @@ font-family: 'proxima_nova_rgregular'
   position:relative;
 
 }
-.card-small-div:hover .content-small-card{
+
+.card-small-div:hover .card-small-content-overlay{
  opacity:1;
+
 
 }
 
