@@ -2,14 +2,16 @@ import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import '../assets/css/styles.css'
+import Logo from '../assets/media/logowhite.png'
 
 const Header = ({siteTitle}) => (
 
     <div className="navbar-topnav" id="navbar-topnav-id">
-        <a  className="active">Home</a>
-        <a >News</a>
-        <a>Contact</a>
-        <a >About</a>
+        <a ><Link to="/"><img  className="navbar-topnav-img" src={Logo}/></Link></a>
+        <a ><Link to="/">Home</Link></a>
+        <a><Link to="/Aboutus">About Us</Link></a>
+        <a><Link to="/Portfolio">Client Showcase</Link></a>
+        <a ><Link to="/Contact">Home</Link></a>
         <a className="navbar-icon" onClick={myFunction}>
             Menu
         </a>

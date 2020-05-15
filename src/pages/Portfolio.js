@@ -2,12 +2,14 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Card from '../components/Card';
 import { Link } from "gatsby"
-
+import Header from '../components/header';
+import Footer from '../components/footer';
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Desc from '../components/Desc';
 const Portfolio = ({data , headerData}) => (
 <div>
+<Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
     <HeaderSmall key={headersmall.node.id} text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.url}/>
 
@@ -25,7 +27,7 @@ const Portfolio = ({data , headerData}) => (
 
        ))}
 </Grid>
-
+<Footer/>
 </div>
 
 )

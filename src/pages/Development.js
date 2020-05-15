@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, graphql } from "gatsby"
 
-
+import Header from '../components/header';
+import Footer from '../components/footer';
 import Card from '../components/Card';
 
 import HeaderSmall from '../components/HeaderSmall';
@@ -47,6 +48,7 @@ var settings = {
 };
 const Development = ({data , headerData}) => (
 <div>
+<Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
 
@@ -70,7 +72,7 @@ const Development = ({data , headerData}) => (
 
        ))}
        </Slider>
-
+<Footer/>
 </div>
 
 )

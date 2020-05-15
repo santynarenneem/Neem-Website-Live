@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Header from '../components/header';
+import Footer from '../components/footer';
 import Layout from "../components/layout"
 import Card from '../components/Card';
 import SEO from "../components/seo"
@@ -53,6 +54,7 @@ var settings = {
 };
 const IndexPage = ({data}) => (
  <Grid container>
+ <Header/>
    <Grid item md={12} xs={12}>    {data.allSanityHeaderBig.edges.map(headersmall=>(
       <div  key={headersmall.node.id}>
 
@@ -112,21 +114,7 @@ const IndexPage = ({data}) => (
 </Slider>
 </Grid>
 <Grid item md={12} xs={12}>
-<Link style={{
-  marginLeft: 20, color: `orange`
-}} to="/Portfolio/">Client Showcase</Link>
-<Link style={{
-marginLeft: 20, color: `orange`
-}} to="/AboutUs/">About Us</Link>
-<Link style={{
-marginLeft: 20, color: `orange`
-}} to="/Resourcing/">Resourcing</Link>
-<Link style={{
-marginLeft: 20, color: `orange`
-}} to="/Development/">Development</Link>
-<Link style={{
-marginLeft: 20, color: `orange`
-}} to="/Consulting/">Consulting</Link>
+<Footer/>
 </Grid>
 </Grid>
 )

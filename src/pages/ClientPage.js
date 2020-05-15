@@ -3,11 +3,14 @@ import HeaderSmall from '../components/HeaderSmall'
 import CardMid from '../components/Card'
 import Desc from '../components/Desc'
 import DescHead from '../components/DescHead'
+import Header from '../components/header';
+import Footer from '../components/footer';
 import Grid from '@material-ui/core/Grid';
 function ClientPage({data}) {
 
     return (
         <div>
+        <Header/>
             <HeaderSmall text={data.sanityClient.name} breadcrumb={data.sanityClient.name} img={data.sanityClient.image1.asset.url}/>
             <DescHead text={data.sanityClient.name}/>
        <Desc text = {data.sanityClient._rawBody[0].children[0].text}/>
@@ -23,7 +26,7 @@ function ClientPage({data}) {
           </Grid>
 
           </Grid>
-
+<Footer/>
 
         </div>
     )

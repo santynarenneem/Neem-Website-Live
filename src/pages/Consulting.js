@@ -2,7 +2,8 @@ import React from 'react'
 import { Link , graphql } from "gatsby"
 
 import Card from '../components/Card';
-
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 import HeaderSmall from '../components/HeaderSmall';
 import Slider from "react-slick";
@@ -70,7 +71,7 @@ const Consulting = ({data , headerData}) => (
 
        ))}
        </Slider>
-
+<Footer/>
 </div>
 
 )

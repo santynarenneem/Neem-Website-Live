@@ -22,6 +22,7 @@
 }
 body{
  overflow-x: hidden;
+ margin:0;
 }
 
 
@@ -162,8 +163,8 @@ padding-bottom: 70px;
 
 .hero-small-img{
   width: 100%;
-  display: block;
-  height: 400px;
+
+  height: 500px;
 
 
 }
@@ -186,23 +187,37 @@ opacity:1;
   position:relative;
 
 }
+/*Footer CSS*/
 
+.footer-div{
+  background-color: #283347;
+  color: #fff;
+  width: 100%;
+  height: 150px;
+}
 /*Header Nav Css*/
 
 
 
 .navbar-topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000000ee;
+  width: 100%;
+  z-index: 100;
+  height: 100px;
+  position: fixed;
 }
-
+.navbar-topnav-img{
+  width: 150px;
+}
 .navbar-topnav a {
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px;
   text-decoration: none;
+  font-family: 'proxima_nova_rgbold';
   font-size: 17px;
 }
 
@@ -212,12 +227,13 @@ opacity:1;
 }
 
 .navbar-topnav a.active {
-  background-color: #4CAF50;
+  background-color: #000000ae;
   color: white;
 }
 
-.navbar-topnav .icon {
+.navbar-topnav .navbar-icon {
   display: none;
+
 }
 
 /*Header Css*/
@@ -356,22 +372,31 @@ font-family: 'proxima_nova_rgregular'
       .homepage-hero-tags-d{
         font-size: 10px;
       }
+      .navbar-topnav-img{
+        width: 80px;
+      }
 
   }
 
   @media screen and (max-width: 600px) {
+    body{
+      margin:0;
+    }
     .navbar-topnav a:not(:first-child) {display: none;}
-    .navbar-topnav a.icon {
+    .navbar-topnav a.navbar-icon {
       float: right;
-      display: block;
+      display: inherit;
+      z-index: 100;
+
     }
   }
 
   @media screen and (max-width: 600px) {
     .navbar-topnav.responsive {position: relative;}
-    .navbar-topnav.responsive .icon {
+    .navbar-topnav.responsive .navbar-icon {
       position: absolute;
       right: 0;
+      background-color: #000000ae;
       top: 0;
     }
     .navbar-topnav.responsive a {

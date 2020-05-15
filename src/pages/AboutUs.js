@@ -5,6 +5,7 @@ import CardMid from '../components/CardMid';
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
+import Footer from '../components/footer';
 import BigCard from '../components/BigCard';
 const AboutUs = ({data , headerData}) => (
 <div>
@@ -35,7 +36,7 @@ const AboutUs = ({data , headerData}) => (
 
        ))}
 </Grid>
-
+<Footer/>
 </div>
 
 )

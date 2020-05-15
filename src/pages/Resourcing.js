@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from "gatsby"
-
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 import Card from '../components/Card';
 
@@ -48,6 +49,7 @@ var settings = {
 };
 const Resourcing = ({data , headerData}) => (
 <div>
+<Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
 
@@ -71,7 +73,7 @@ const Resourcing = ({data , headerData}) => (
 
        ))}
        </Slider>
-
+<Footer/>
 </div>
 
 )
