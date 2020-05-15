@@ -40,9 +40,8 @@ const ContactUs = ({data , headerData}) => (
 </div>
 
 )
-export const data =
-graphql`
-    query MyQueryandMyQueryContactQuery {
+export const data = graphql`
+    query MyQueryandMyQueryandContactQuery {
       allSanityService(filter: {service_title: {in: ["Development","Resourcing","Consulting"]}}) {
         edges {
           node {

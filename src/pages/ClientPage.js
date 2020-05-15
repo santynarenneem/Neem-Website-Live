@@ -3,6 +3,7 @@ import HeaderSmall from '../components/HeaderSmall'
 import CardMid from '../components/Card'
 import Desc from '../components/Desc'
 import DescHead from '../components/DescHead'
+import { graphql } from 'gatsby'
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Grid from '@material-ui/core/Grid';

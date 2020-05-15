@@ -9,9 +9,9 @@ const Header = ({siteTitle}) => (
     <div className="navbar-topnav" id="navbar-topnav-id">
         <a ><Link to="/"><img  className="navbar-topnav-img" src={Logo}/></Link></a>
         <a ><Link to="/">Home</Link></a>
-        <a><Link to="/Aboutus">About Us</Link></a>
+        <a><Link to="/AboutUs">About Us</Link></a>
         <a><Link to="/Portfolio">Client Showcase</Link></a>
-        <a ><Link to="/Contact">Home</Link></a>
+        <a ><Link to="/ContactUs">Contact</Link></a>
         <a className="navbar-icon" onClick={myFunction}>
             Menu
         </a>
