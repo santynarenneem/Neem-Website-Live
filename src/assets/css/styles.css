@@ -34,15 +34,17 @@ body{
     font-family: 'proxima_nova_rgregular'
   }
   .desc-small-div{
-
-    width:100%;
+padding-top: 70px;
+padding-bottom: 70px;
+    width:40%;
     text-align:center;
   }
 
   /* Desc Big Component CSS */
   .desc-big-head-div{
-
-    width:100%;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    width:40%;
     text-align:center;
 
   }
@@ -126,11 +128,14 @@ body{
   color: #424143;
   font-size: 40px;
   font-weight: 500;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 0px;
   font-family: 'proxima_nova_rgbold' , sans-serif ;
 }
 .big-card-right{
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .big-card-tagline{
   color: #DD4027;
@@ -228,6 +233,8 @@ opacity:1;
 
 
 .card-mid-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 100%;
@@ -323,11 +330,16 @@ font-family: 'proxima_nova_rgregular'
 
       #homepage-hero-video{
 
-
+        height: 100%;
         width: 100%;
 
       }
-
+      .desc-small-div{
+        width:90%;
+      }
+      .desc-big-head-div{
+        width:90%;
+      }
       .homepage-hero-header-text{
 
         font-size: 20px;

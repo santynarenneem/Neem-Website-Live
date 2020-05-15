@@ -9,8 +9,9 @@ function BigCard(props) {
             </Grid>
             <Grid item md={6} xs={12}>
                 <div className="big-card-right">
+                <h6 className="big-card-tagline">{props.tagline}</h6>
                     <h1 className="big-card-header">{props.title}</h1>
-                    <h6 className="big-card-tagline">{props.tagline}</h6>
+
                     <p className="big-card-content">{props.text}</p>
                 </div>
             </Grid>
