@@ -237,7 +237,7 @@ body {
     background-color: #000000ae;
     color: white;
 }
-.navbar-topnav a:last-child{
+.navbar-topnav:last-child{
     display: none;
 }
 .navbar-topnav .navbar-icon {
@@ -394,9 +394,6 @@ body {
 
     .navbar-topnav a:not(:first-child) {
         display: none;
-    }
-    .navbar-topnav:last-child{
-        display: block;
     }
     .navbar-topnav a.navbar-icon {
         float: right;
