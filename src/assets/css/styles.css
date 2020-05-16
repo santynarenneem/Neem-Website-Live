@@ -237,7 +237,7 @@ body {
     background-color: #000000ae;
     color: white;
 }
-.navbar-topnav:last-child{
+.navbar-topnav a:last-child{
     display: none;
 }
 .navbar-topnav .navbar-icon {

@@ -26,7 +26,7 @@ const Header = ({siteTitle}) => (
 
 
         <a className="navbar-icon" onClick={mobileMenu}>
-        <Link to="/ContactUs">Contact</Link>
+           Menu
         </a>
     </div>
 
