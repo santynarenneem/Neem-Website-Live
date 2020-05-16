@@ -21,6 +21,7 @@ const AboutUs = ({data , headerData}) => (
 <BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
+
 <Grid container  spacing={2} >
 {data.allSanityService.edges.map(client=>(
 
@@ -36,6 +37,7 @@ const AboutUs = ({data , headerData}) => (
 
        ))}
 </Grid>
+
 <Footer/>
 </div>
 

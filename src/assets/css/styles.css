@@ -58,6 +58,9 @@ body {
 
 /*Homepage Hero Component CSS*/
 
+
+
+
 /* Video Background */
 #homepage-hero-video {
     background: rgba(0, 0, 0, 0.9);
@@ -70,6 +73,13 @@ body {
     bottom: 0;
     /* z-index: -1; */
 
+}
+
+.homepage-hero-div{
+    margin-top: -400px;
+    margin-left: 200px;
+    position: absolute;
+    text-align: center;
 }
 
 .homepage-hero-header-text {
@@ -153,6 +163,8 @@ body {
 }
 /*From Hero Css*/
 
+
+
 .hero-small-img {
     width: 100%;
 
@@ -186,6 +198,10 @@ body {
     height: 100px;
     font-family: 'proxima_nova_rgbold';
 }
+
+.footer-div-content{
+    padding: 30px;
+}
 /*Header Nav Css*/
 
 .navbar-topnav {
@@ -212,7 +228,7 @@ body {
     font-family: 'proxima_nova_rgbold';
     font-size: 17px;
 }
-.navbar-topnav a:hover {
+.navbar-topnav a:not(:first-child) :hover {
     background-color: #DD4027;
 
 }
@@ -347,6 +363,12 @@ body {
     .desc-big-head-div {
         width: 90%;
     }
+    .homepage-hero-div{
+        margin-top: -100px;
+        margin-left: 100px;
+        position: absolute;
+        text-align: center;
+    }
     .homepage-hero-header-text {
 
         font-size: 20px;
@@ -380,6 +402,7 @@ body {
     }
 }
 @media screen and (max-width: 600px) {
+    /* .navbar-topnav{} */
     .navbar-topnav.responsive {
         position: relative;
     }

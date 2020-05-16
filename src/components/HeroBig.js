@@ -9,7 +9,14 @@ function HeaderBig(props) {
                 <Grid item md={12} xs={12}>
                     <video id="homepage-hero-video" autoPlay muted loop >
                         <source xs={12}src={Video} id="homepage-hero-video-src"  type="video/mp4"/>
-                    </video>
+
+                        </video>
+                        <div className="homepage-hero-div">
+                        <span className="homepage-hero-tags-w">We Are</span><br/>
+                        <span className="homepage-hero-header-text">{props.text}</span>
+                        <br/><span className="homepage-hero-tags-d">Development</span>
+                        </div>
+
                 </Grid>
 
           {/*    <Grid item md={12} xs={12}>

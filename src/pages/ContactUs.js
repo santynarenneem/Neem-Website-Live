@@ -21,34 +21,30 @@ const ContactUs = ({data , headerData}) => (
 <Desc  text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
+
 <Grid container  spacing={2} >
+{data.allSanityService.edges.map(client=>(
 
 
 
+    <Grid item md={4}xs={12}   key={client.node._id}>
 
-    <Grid item md={4}xs={12}  >
-
-
-    <CardMid title="Call us!" img="" content="+44 207 097 8760" />
-
-
-    </Grid>
-    <Grid item md={4}xs={12}  >
-
-
-    <CardMid title="Drop us a note!" img="" content="contact@neemconsulting.com" />
-
-
-    </Grid>
-    <Grid item md={4}xs={12}  >
-
-
-    <CardMid title="Pop In !" img="" content="Venture Point, Ellesmere Port CH2 4NE" />
-
+{console.log(client.node._rawBody[0])}
+    <CardMid title={client.node.service_title} img={client.node.image1.asset.url} content={client.node._rawBody[0].children[0].text} />
+    <br/>
 
     </Grid>
 
+       ))}
+</Grid>
 
+<Grid container >
+<Grid item md={6} xs={12}>
+Test
+</Grid>
+<Grid item md={6} xs={12}>
+Test
+</Grid>
 
 </Grid>
 <Footer/>

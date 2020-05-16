@@ -14,6 +14,7 @@ import DescHead from '../components/DescHead';
 import Desc from '../components/Desc';
 import BigCard from '../components/BigCard';
 import Slider from "react-slick";
+import '../assets/css/animate.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 var settings = {
@@ -102,7 +103,7 @@ const IndexPage = ({data}) => (
 {data.allSanityClient.edges.map(client=>(
 
     <div key={client.node.id} >
-   <Link to={'/project/'+client.node.slug.current+''}> <Card title={client.node.name} img={client.node.image1.asset.url}/>
+   <Link to={'/project/'+client.node.slug.current+''}> <Card title={client.node.name} img={client.node.preview.asset.url}/>
    </Link>
    <br/>
     </div>
@@ -173,7 +174,7 @@ export const data = graphql`
               slug{
                 current
               }
-                image1{
+                preview{
                     asset{
                         url
                     }

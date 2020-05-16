@@ -7,12 +7,13 @@ import { graphql } from 'gatsby'
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Grid from '@material-ui/core/Grid';
+import HeaderImage from '../assets/media/client-page-header.jpg'
 function ClientPage({data}) {
 
     return (
         <div>
         <Header/>
-            <HeaderSmall text={data.sanityClient.name} breadcrumb={data.sanityClient.name} img={data.sanityClient.image1.asset.url}/>
+            <HeaderSmall text={data.sanityClient.name} breadcrumb={data.sanityClient.name} img={HeaderImage}/>
             <DescHead text={data.sanityClient.name}/>
        <Desc text = {data.sanityClient._rawBody[0].children[0].text}/>
             <Grid container >
