@@ -16,17 +16,17 @@ const Header = ({siteTitle}) => (
         <a>
             <Link to="/AboutUs">About Us</Link>
         </a>
-        <a className="navbar-icon" >
+        <a>
             <Link to="/Portfolio">Client Showcase</Link>
         </a>
         <a >
             <Link to="/ContactUs">Contact</Link>
         </a>
 
-
-
-        <a onClick={mobileMenu}>
-         <Link>  Menu</Link>
+        <a className="navbar-icon" onClick={mobileMenu}>
+            <Link>
+                Menu
+            </Link>
         </a>
     </div>
 
