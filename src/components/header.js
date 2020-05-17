@@ -1,34 +1,38 @@
 import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import '../assets/css/styles.css'
+
+
+
 import Logo from '../assets/media/logowhite.png'
+import { Navbar , Nav , NavDropdown , Form,Button,FormControl } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Header = ({siteTitle}) => (
 
-    <div className="navbar-topnav" id="navbar-topnav-id">
-        <a >
-            <Link to="/"><img className="navbar-topnav-img" src={Logo}/></Link>
-        </a>
-        <a >
-            <Link to="/">Home</Link>
-        </a>
-        <a>
-            <Link to="/AboutUs">About Us</Link>
-        </a>
-        <a>
-            <Link to="/Portfolio">Client Showcase</Link>
-        </a>
-        <a >
-            <Link to="/ContactUs">Contact</Link>
-        </a>
+    <Navbar bg="dark" fixed="top"variant="dark" expand="lg">
+    <Navbar.Brand href="#home"><img className="navbar-topnav-img" src={Logo}/></Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link>
+       <Link to="/"> Home</Link>
+        </Nav.Link>
+        <Nav.Link>
+        <Link to="/AboutUs"> About Us</Link>
+        </Nav.Link>
+        <Nav.Link>
+        <Link to="/Portfolio"> Client Showcase</Link>
+        </Nav.Link>
+        <Nav.Link>
+        <Link to="/ContactUs"> Contact Us</Link>
+        </Nav.Link>
 
-        <a className="navbar-icon" onClick={mobileMenu}>
-            <Link>
-                Menu
-            </Link>
-        </a>
-    </div>
+      </Nav>
+
+    </Navbar.Collapse>
+  </Navbar>
 
 )
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from "gatsby"
 import CardMid from '../components/CardMid';
-
+import Iframe from 'react-iframe'
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
@@ -53,7 +53,16 @@ const ContactUs = ({data, headerData}) => (
 
         <Grid container>
             <Grid item md={6} xs={12}>
-                Test
+
+
+                <Iframe
+                width="600"
+                height="500"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=Venture%20point%20business%20park&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+                    display="initial"
+                    position="relative"/>
             </Grid>
             <Grid item md={6} xs={12}>
                 <Grid item xs>
