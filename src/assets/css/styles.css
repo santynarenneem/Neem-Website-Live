@@ -18,6 +18,18 @@ body {
     margin: 0;
 }
 
+.contact-form-field{
+    width: 100%;
+   
+
+
+}
+.contact-form-grid{
+    margin-top: 10px;
+    padding: 10px;
+        margin-bottom: 10px;
+}
+
 /* Slider CSS*/
 .slick-next:before,
 .slick-prev:before {

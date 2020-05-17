@@ -7,11 +7,12 @@ import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Desc from '../components/Desc';
-import Drift from "react-driftjs";
+import '../assets/css/styles.css';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 const ContactUs = ({data, headerData}) => (
     <div>
-  
+
         <Header/> {data
             .allSanityHeaderSmall
             .edges
@@ -53,12 +54,12 @@ const ContactUs = ({data, headerData}) => (
                 ))}
         </Grid>
 
-        <Grid container>
-            <Grid item md={6} xs={12}>
+        <Grid container spacing={2}>
+            <Grid  item md={6} xs={12} >
 
 
                 <Iframe
-                width="600"
+                width="100%"
                 height="500"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=Venture%20point%20business%20park&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -69,14 +70,21 @@ const ContactUs = ({data, headerData}) => (
             <Grid item md={6} xs={12}>
                 <Grid item xs>
                     <form noValidate autoComplete="off">
-                        <Grid item xs>
-                            <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
+                        <Grid item xs className="contact-form-grid">
+                            <TextField className="contact-form-field" id="outlined-basic" label="Name" variant="outlined"/>
                         </Grid>
-                        <Grid item xs>
-                            <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
+                        <Grid item xs className="contact-form-grid">
+                            <TextField  className="contact-form-field" id="outlined-basic" label="Telephone" variant="outlined"/>
                         </Grid>
-                        <Grid item xs>
-                            <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
+                        <Grid item xs className="contact-form-grid">
+                            <TextField  className="contact-form-field" id="outlined-basic" label="Email" variant="outlined"/>
+                        </Grid>
+                        <Grid item xs className="contact-form-grid">
+                            <TextField  className="contact-form-field" id="outlined-basic"  multiline
+                            rows={6} label="Message" variant="outlined"/>
+                        </Grid>
+                        <Grid item xs className="contact-form-grid">
+                  <center><Button variant="outlined">Submit</Button></center>
                         </Grid>
 
                     </form>
