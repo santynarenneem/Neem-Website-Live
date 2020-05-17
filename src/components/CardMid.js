@@ -1,10 +1,12 @@
 import React from 'react'
 import '../assets/css/styles.css';
 import Grid from '@material-ui/core/Grid';
+import ReactWOW from 'react-wow'
 function CardMid(props) {
     return (
         <Grid>
             <Grid item md={12} xs={12}>
+            <ReactWOW animation='fadeInUp'>
                 <div className="card-mid-div">
                     <center><img className="card-mid-img" alt={props.title} src={props.img}/></center>
                     <center>
@@ -16,6 +18,7 @@ function CardMid(props) {
                         {props.content}
                     </div>
                 </div>
+                </ReactWOW>
             </Grid>
         </Grid>
     )

@@ -1,6 +1,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
 import '../assets/css/styles.css';
+import ReactWOW from 'react-wow'
 function BigCard(props) {
     return (
         <Grid container>
@@ -9,10 +10,15 @@ function BigCard(props) {
             </Grid>
             <Grid item md={6} xs={12}>
                 <div className="big-card-right">
-                <h6 className="big-card-tagline">{props.tagline}</h6>
-                    <h1 className="big-card-header">{props.title}</h1>
-
-                    <p className="big-card-content">{props.text}</p>
+                    <ReactWOW animation='fadeInUp'>
+                        <h6 className="big-card-tagline">{props.tagline}</h6>
+                    </ReactWOW>
+                    <ReactWOW animation='fadeInUp'>
+                        <h1 className="big-card-header">{props.title}</h1>
+                    </ReactWOW>
+                    <ReactWOW animation='fadeInUp'>
+                        <p className="big-card-content">{props.text}</p>
+                    </ReactWOW>
                 </div>
             </Grid>
         </Grid>

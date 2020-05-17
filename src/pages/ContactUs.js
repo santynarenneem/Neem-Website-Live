@@ -8,6 +8,7 @@ import Header from '../components/header';
 import Footer from '../components/Footer';
 import Desc from '../components/Desc';
 import '../assets/css/styles.css';
+import ReactWOW from 'react-wow'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 const ContactUs = ({data, headerData}) => (
@@ -73,9 +74,11 @@ const ContactUs = ({data, headerData}) => (
                         <Grid item xs className="contact-form-grid">
                             <TextField className="contact-form-field" id="outlined-basic" label="Name" variant="outlined"/>
                         </Grid>
+                        <ReactWOW animation='fadeIn'>
                         <Grid item xs className="contact-form-grid">
                             <TextField  className="contact-form-field" id="outlined-basic" label="Telephone" variant="outlined"/>
                         </Grid>
+                        </ReactWOW>
                         <Grid item xs className="contact-form-grid">
                             <TextField  className="contact-form-field" id="outlined-basic" label="Email" variant="outlined"/>
                         </Grid>
