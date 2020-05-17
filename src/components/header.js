@@ -16,18 +16,16 @@ const Header = ({siteTitle}) => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link>
+
        <Link to="/"> Home</Link>
-        </Nav.Link>
-        <Nav.Link>
+
+
         <Link to="/AboutUs"> About Us</Link>
-        </Nav.Link>
-        <Nav.Link>
+
         <Link to="/Portfolio"> Client Showcase</Link>
-        </Nav.Link>
-        <Nav.Link>
+
         <Link to="/ContactUs"> Contact Us</Link>
-        </Nav.Link>
+
 
       </Nav>
 
