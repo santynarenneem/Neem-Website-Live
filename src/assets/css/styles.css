@@ -392,18 +392,18 @@ body {
 }
 @media screen and (max-width: 600px) {
 
-    .navbar-topnav a:not(:first-child) {
+    /* .navbar-topnav a:not(:first-child) {
         display: none;
     }
     .navbar-topnav a.navbar-icon {
         float: right;
         display: block;
 
-    }
+    } */
 }
 @media screen and (max-width: 600px) {
     /* .navbar-topnav{} */
-    .navbar-topnav.responsive {
+    /* .navbar-topnav.responsive {
         position: relative;
     }
     .navbar-topnav.responsive .navbar-icon {
@@ -416,9 +416,10 @@ body {
         float: none;
         /* height: 100%; */
 
-        display: block;
+        /* display: block;
         text-align: left;
     }
+     */
     body {
       margin: 0;
   }

@@ -26,6 +26,7 @@
     "react-animated-css": "^1.2.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-driftjs": "^1.1.11",
     "react-helmet": "^6.0.0",
     "react-iframe": "^1.8.0",
     "react-slick": "^0.26.1",

@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = ({siteTitle}) => (
 
-    <Navbar bg="dark" fixed="top"variant="dark" expand="lg">
-    <Navbar.Brand href="#home"><img className="navbar-topnav-img" src={Logo}/></Navbar.Brand>
+    <Navbar className="navbar-topnav"  fixed="top"variant="dark" expand="lg">
+    <Navbar.Brand><img className="navbar-topnav-img" src={Logo}/></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">

@@ -1,5 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
+import Drift from "react-driftjs";
 function Footer() {
     return (
 
@@ -9,7 +10,11 @@ function Footer() {
                     <div className="footer-div-content">
 
                         © 2020 Neem Consulting. All rights reserved.
-                    </div>
+
+
+
+
+                        </div>
                 </div>
             </Grid>
         </Grid>

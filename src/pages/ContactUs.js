@@ -7,9 +7,11 @@ import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Desc from '../components/Desc';
+import Drift from "react-driftjs";
 import TextField from '@material-ui/core/TextField';
 const ContactUs = ({data, headerData}) => (
     <div>
+    <Drift appId="santhoshnarendra" />
         <Header/> {data
             .allSanityHeaderSmall
             .edges
