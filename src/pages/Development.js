@@ -53,19 +53,19 @@ const Development = ({data , headerData}) => (
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
 
-    <HeaderSmall text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.url}/>
+    <HeaderSmall text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.fluid}/>
     </div>
 ))}
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
-<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
+<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.fluid} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
 <Slider style={{margin:20}}{...settings}>
 {data.allSanityClient.edges.map(client=>(
 
     <div key={client.node.id} >
-    <Link  to={'/project/'+client.node.slug.current+''}><Card title={client.node.name} img={client.node.image1.asset.url}/>
+    <Link  to={'/project/'+client.node.slug.current+''}><Card title={client.node.name} img={client.node.image1.asset.fluid}/>
     </Link>
     <br/>
     </div>
@@ -101,7 +101,9 @@ export const data = graphql`
                 headerText
                 headerImage{
                   asset{
-                    url
+                    fluid(maxWidth: 700) {
+                      ...GatsbySanityImageFluid
+                    }
                   }
                 }
                 breadcrumb
@@ -119,7 +121,9 @@ export const data = graphql`
                 }
                   image1{
                       asset{
-                          url
+                        fluid(maxWidth: 700) {
+                          ...GatsbySanityImageFluid
+                        }
                       }
                   }
               }
@@ -135,7 +139,9 @@ export const data = graphql`
               _rawDescription
               imageShow {
                 asset {
-                  url
+                  fluid(maxWidth: 700) {
+                    ...GatsbySanityImageFluid
+                  }
                 }
               }
             }

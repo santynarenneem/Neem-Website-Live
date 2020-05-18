@@ -15,12 +15,12 @@ const AboutUs = ({data , headerData}) => (
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
 
-    <HeaderSmall text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.url}/>
+    <HeaderSmall text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.fluid}/>
     </div>
 ))}
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
-<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
+<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.fluid} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
 
@@ -32,7 +32,7 @@ const AboutUs = ({data , headerData}) => (
     <Grid item md={4}xs={12}   key={client.node._id}>
 
 {console.log(client.node._rawBody[0])}
-    <CardMid title={client.node.service_title} img={client.node.image1.asset.url} content={client.node._rawBody[0].children[0].text} />
+    <CardMid title={client.node.service_title} img={client.node.image1.asset.url} content={client.node._rawBody[0].children[0].text} url={client.node.link}/>
     <br/>
 
     </Grid>
@@ -51,6 +51,7 @@ graphql`
         edges {
           node {
             _id
+            link
             image1 {
               asset {
                 url
@@ -69,7 +70,9 @@ graphql`
                 headerText
                 headerImage{
                   asset{
-                    url
+                    fluid(maxWidth: 700) {
+                      ...GatsbySanityImageFluid
+                    }
                   }
                 }
                 breadcrumb
@@ -86,7 +89,9 @@ graphql`
               _rawDescription
               imageShow {
                 asset {
-                  url
+                  fluid(maxWidth: 700) {
+                    ...GatsbySanityImageFluid
+                  }
                 }
               }
             }

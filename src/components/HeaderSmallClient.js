@@ -1,11 +1,11 @@
 import React from 'react'
 import '../assets/css/styles.css'
-import Img from "gatsby-image"
-function HeaderSmall(props) {
+
+function HeaderSmallClient(props) {
     return (
         <div>
             <div className="hero-small-image">
-                <Img className="hero-small-img" alt="client_image" fluid={props.img}/>
+                <img className="hero-small-img" alt="client_image" src={props.img}/>
                 <span className="hero-small-content">
                     {props.text}</span>
             </div>
@@ -13,4 +13,4 @@ function HeaderSmall(props) {
     )
 }
 
-export default HeaderSmall
+export default HeaderSmallClient

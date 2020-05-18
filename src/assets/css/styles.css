@@ -172,6 +172,7 @@ body {
 }
 .big-card-image {
     width: 100%;
+    object-fit: cover;
 }
 /*From Hero Css*/
 
@@ -179,7 +180,7 @@ body {
 
 .hero-small-img {
     width: 100%;
-
+    object-fit: cover;
     height: 500px;
 
 }
@@ -199,7 +200,7 @@ body {
 
 .hero-small-image {
     position: relative;
-
+    object-fit: cover;
 }
 /*Footer CSS*/
 
@@ -282,7 +283,29 @@ body {
     height: 450px;
     transition-timing-function: ease-in;
 }
+.card-mid-div-contact {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-right: 0 solid #DD4027;
+    border-top: 0 solid #DD4027;
+    border-bottom: 0 solid #DD4027;
+    border-left: 0 solid #DD4027;
+    transition: border-left 0.2s,border-right 0.2s , border-top 0.3s,border-bottom 0.3s;
+    height: 250px;
+    transition-timing-function: ease-in;
+}
 .card-mid-div:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-right: 2px solid #DD4027;
+    border-top: 2px solid #DD4027;
+    border-bottom: 2px solid #DD4027;
+    border-left: 2px solid #DD4027;
+
+}
+.card-mid-div-cotnact:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     border-right: 2px solid #DD4027;
     border-top: 2px solid #DD4027;
@@ -297,6 +320,13 @@ body {
     padding-right: 30px;
 
     height: 180px;
+}
+.card-mid-contact-img {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    height: 100px;
 }
 .card-mid-header {
     font-size: 30px;

@@ -80,7 +80,7 @@ const IndexPage = ({data}) => (
     <Grid item md={4}xs={12}   key={client.node._id}>
 
 {console.log(client.node._rawBody[0])}
-    <CardMid title={client.node.service_title} img={client.node.image1.asset.url} content={client.node._rawBody[0].children[0].text} />
+    <CardMid title={client.node.service_title} img={client.node.image1.asset.url} content={client.node._rawBody[0].children[0].text} url={client.node.link} />
     <br/>
 
     </Grid>
@@ -91,7 +91,7 @@ const IndexPage = ({data}) => (
 <Grid item md={12} xs={12}>
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
-<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.url} text={detail.node._rawDescription[0].children[0].text}/>
+<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.fluid} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
 </Grid>
@@ -104,7 +104,7 @@ const IndexPage = ({data}) => (
 {data.allSanityClient.edges.map(client=>(
 
     <div key={client.node.id} >
-   <Link to={'/project/'+client.node.slug.current+''}> <Card title={client.node.name} img={client.node.preview.asset.url}/>
+   <Link to={'/project/'+client.node.slug.current+''}> <Card title={client.node.name} img={client.node.preview.asset.fluid}/>
    </Link>
    <br/>
     </div>
@@ -126,6 +126,7 @@ export const data = graphql`
         edges {
           node {
             _id
+            link
             image1 {
               asset {
                 url
@@ -160,9 +161,12 @@ export const data = graphql`
               headerText
               _rawDescription
               imageShow {
-                asset {
-                  url
+                asset{
+                  fluid(maxWidth: 700) {
+                    ...GatsbySanityImageFluid
+                  }
                 }
+               
               }
             }
           }
@@ -177,7 +181,9 @@ export const data = graphql`
               }
                 preview{
                     asset{
-                        url
+                      fluid(maxWidth: 700) {
+                        ...GatsbySanityImageFluid
+                      }
                     }
                 }
             }

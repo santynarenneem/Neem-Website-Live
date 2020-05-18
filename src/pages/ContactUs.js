@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from "gatsby"
-import CardMid from '../components/CardMid';
+import CardMidContact from '../components/CardContact';
 import Iframe from 'react-iframe'
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
@@ -24,7 +24,7 @@ const ContactUs = ({data, headerData}) => (
                     <HeaderSmall
                         text={headersmall.node.headerText}
                         breadcrumb={headersmall.node.breadcrumb}
-                        img={headersmall.node.headerImage.asset.url}/>
+                        img={headersmall.node.headerImage.asset.fluid}/>
                 </div>
             ))}
         {data
@@ -45,7 +45,7 @@ const ContactUs = ({data, headerData}) => (
                     <Grid xs={12} item md={4} key={client.node._id}>
 
                         {console.log(client.node._rawBody[0])}
-                        <CardMid
+                        <CardMidContact
                             title={client.node.service_title}
                             img={client.node.image1.asset.url}
                             content={client.node._rawBody[0].children[0].text}/>
@@ -125,7 +125,9 @@ export const data = graphql `
                 headerText
                 headerImage{
                   asset{
-                    url
+                    fluid(maxWidth: 700) {
+                        ...GatsbySanityImageFluid
+                      }
                   }
                 }
                 breadcrumb
@@ -142,7 +144,9 @@ export const data = graphql `
               _rawDescription
               imageShow {
                 asset {
-                  url
+                    fluid(maxWidth: 700) {
+                        ...GatsbySanityImageFluid
+                      }
                 }
               }
             }

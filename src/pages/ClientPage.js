@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderSmall from '../components/HeaderSmall'
+import HeaderSmallClient from '../components/HeaderSmallClient'
 import CardMid from '../components/Card'
 import Desc from '../components/Desc'
 import DescHead from '../components/DescHead'
@@ -15,18 +15,18 @@ function ClientPage({data}) {
         <div>
         <SEO title="Neem Clients" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
         <Header/>
-            <HeaderSmall text={data.sanityClient.name} breadcrumb={data.sanityClient.name} img={HeaderImage}/>
+            <HeaderSmallClient text={data.sanityClient.name} breadcrumb={data.sanityClient.name} img={HeaderImage}/>
             <DescHead text={data.sanityClient.name}/>
        <Desc text = {data.sanityClient._rawBody[0].children[0].text}/>
             <Grid container >
           <Grid item md={4} xs={12}>
-          <CardMid img={data.sanityClient.image1.asset.url}/>
+          <CardMid img={data.sanityClient.image1.asset.fluid}/>
           </Grid>
           <Grid item md={4} xs={12}>
-          <CardMid img={data.sanityClient.image2.asset.url}/>
+          <CardMid img={data.sanityClient.image2.asset.fluid}/>
           </Grid>
           <Grid item md={4} xs={12}>
-          <CardMid img={data.sanityClient.image3.asset.url}/>
+          <CardMid img={data.sanityClient.image3.asset.fluid}/>
           </Grid>
 
           </Grid>
@@ -42,17 +42,23 @@ name
 _rawBody
 image1{
     asset{
-        url
+        fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
     }
 }
 image2{
     asset{
-        url
+        fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
     }
 }
 image3{
     asset{
-        url
+        fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
     }
 }
 slug{

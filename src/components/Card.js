@@ -1,12 +1,12 @@
 import React from 'react'
 
 import '../assets/css/styles.css';
-
+import Img from "gatsby-image"
 const Card = (props) => {
     return (
         <div>
             <div className="card-small-div">
-                <img className="card-small-img" alt="client_image" src={props.img}/>
+                <Img className="card-small-img" alt="client_image" fluid={props.img}/>
                 <div className="card-small-content-overlay">
                     <span className="card-small-content">
                         {props.title}</span>
