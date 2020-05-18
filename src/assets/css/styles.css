@@ -20,7 +20,7 @@ body {
 
 .contact-form-field{
     width: 100%;
-   
+
 
 
 }
@@ -414,6 +414,10 @@ body {
     } */
 }
 @media screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        margin: 0;
+    }
     /* .navbar-topnav{} */
     /* .navbar-topnav.responsive {
         position: relative;
@@ -432,7 +436,5 @@ body {
         text-align: left;
     }
      */
-    body {
-      margin: 0;
-  }
+
 }

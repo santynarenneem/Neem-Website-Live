@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import Card from '../components/Card';
 
 import HeaderSmall from '../components/HeaderSmall';
-
+import SEO from '../components/seo';
 import BigCard from '../components/BigCard';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -49,6 +49,7 @@ var settings = {
 };
 const Resourcing = ({data , headerData}) => (
 <div>
+<SEO title="Neem Resourcing" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>

@@ -11,9 +11,10 @@ import '../assets/css/styles.css';
 import ReactWOW from 'react-wow'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import SEO from '../components/seo';
 const ContactUs = ({data, headerData}) => (
     <div>
-
+    <SEO title="Neem Contact" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
         <Header/> {data
             .allSanityHeaderSmall
             .edges

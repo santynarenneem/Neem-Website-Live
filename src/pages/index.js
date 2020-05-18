@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Header from '../components/header';
 import Footer from '../components/Footer';
-import Layout from "../components/layout"
+
 import Card from '../components/Card';
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
@@ -55,6 +55,7 @@ var settings = {
 };
 const IndexPage = ({data}) => (
  <Grid container>
+ <SEO title="Neem Home" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
  <Header/>
    <Grid item md={12} xs={12}>    {data.allSanityHeaderBig.edges.map(headersmall=>(
       <div  key={headersmall.node.id}>

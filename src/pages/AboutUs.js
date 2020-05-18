@@ -6,9 +6,11 @@ import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
 import Footer from '../components/Footer';
+import SEO from '../components/seo';
 import BigCard from '../components/BigCard';
 const AboutUs = ({data , headerData}) => (
 <div>
+<SEO title="Neem About" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>

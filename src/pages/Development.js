@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Card from '../components/Card';
-
+import SEO from '../components/seo';
 import HeaderSmall from '../components/HeaderSmall';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -48,6 +48,7 @@ var settings = {
 };
 const Development = ({data , headerData}) => (
 <div>
+<SEO title="Neem Development" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>

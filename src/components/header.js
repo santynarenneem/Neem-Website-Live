@@ -5,14 +5,14 @@ import React from "react"
 
 
 import Logo from '../assets/media/logowhite.png'
-import { Navbar , Nav , NavDropdown , Form,Button,FormControl } from 'react-bootstrap';
+import { Navbar , Nav} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Header = ({siteTitle}) => (
 
     <Navbar className="navbar-topnav"  fixed="top"variant="dark" expand="lg">
-    <Navbar.Brand><img className="navbar-topnav-img" src={Logo}/></Navbar.Brand>
+    <Navbar.Brand><img alt="company-logo"className="navbar-topnav-img" src={Logo}/></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
@@ -37,17 +37,7 @@ const Header = ({siteTitle}) => (
 Header.propTypes = {
     siteTitle: PropTypes.string
 }
-function mobileMenu(e) {
-    e.preventDefault();
-    var x = document.getElementById("navbar-topnav-id");
 
-    if (x.className === "navbar-topnav") {
-
-        x.className += " responsive";
-    } else {
-        x.className = "navbar-topnav";
-    }
-}
 Header.defaultProps = {
     siteTitle: ``
 }

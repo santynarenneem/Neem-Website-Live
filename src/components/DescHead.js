@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/css/styles.css'
 import Grid from '@material-ui/core/Grid';
-import {Animated} from "react-animated-css";
+
 import ReactWOW from 'react-wow'
 function DescHead(props) {
     return (
