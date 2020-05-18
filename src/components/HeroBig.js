@@ -18,7 +18,9 @@ function HeaderBig(props) {
                             <span className="homepage-hero-header-text">{props.text}</span>
                             <br/>
                             <span className="homepage-hero-tags-d">Development</span>
-                        </div>
+                            <span className="homepage-hero-tags-c">Consulting</span>
+                            <span className="homepage-hero-tags-r">Resourcing</span>
+                            </div>
                     </ReactWOW>
 
                 </Grid>

@@ -18,6 +18,14 @@ body {
     margin: 0;
 }
 
+.line-art{
+
+        width:15vw;
+          border: 2px solid #DD4027;
+          border-radius: 1px;
+
+}
+
 .contact-form-field{
     width: 100%;
 
@@ -78,7 +86,7 @@ body {
     background: rgba(0, 0, 0, 0.9);
     /* margin-top: -30px; */
     width: 100%;
-    /* position: absolute; */
+    position: relative;
     left: 0;
     right: 0;
     opacity: 0.88;
@@ -88,17 +96,18 @@ body {
 }
 
 .homepage-hero-div{
-    margin-top: -400px;
-    margin-left: 200px;
     position: absolute;
+    top:50vh;
+    left: 50vw;
     text-align: center;
+    transform: translate(-50%, -50%);
 }
 
 .homepage-hero-header-text {
     color: #fff;
     font-weight: bold;
     font-family: 'proxima_nova_rgbold' , sans-serif;
-    font-size: 100px;
+    font-size: 5vw;
     text-transform: uppercase;
     font-stretch: expanded;
 }
@@ -106,7 +115,7 @@ body {
     color: #DD4027;
     font-weight: bold;
     font-family: 'proxima_nova_rgbold' , sans-serif;
-    font-size: 50px;
+    font-size: 3vw;
     margin: 20px;
 
 }
@@ -115,7 +124,7 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'proxima_nova_rgbold' , sans-serif;
-    font-size: 50px;
+    font-size: 3vw;
     margin: 20px;
 
 }
@@ -124,7 +133,7 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'proxima_nova_rgbold' , sans-serif;
-    font-size: 50px;
+    font-size: 3vw;
     margin: 20px;
 
 }
@@ -133,7 +142,7 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'proxima_nova_rgbold' , sans-serif;
-    font-size: 30px;
+    font-size:3vw;
     margin-bottom: 20px;
     letter-spacing: 20px;
     text-transform: uppercase;
@@ -161,6 +170,16 @@ body {
     padding-right: 50px;
     font-family: 'proxima_nova_rgbold' , sans-serif;
     font-weight: 500;
+}
+.big-card-tagline::before {
+
+    display: inline-block;
+    content: "";
+    border-top: 3px solid #DD4027;
+    width: 5vw;
+    margin: 5px;
+
+
 }
 .big-card-content {
     color: #424143;
@@ -391,6 +410,9 @@ body {
 }
 
 /*Media Queries*/
+
+
+
 @media only screen and (max-width: 600px) {
 
     #homepage-hero-video {
@@ -406,65 +428,63 @@ body {
         width: 90%;
     }
     .homepage-hero-div{
-        margin-top: -100px;
-        margin-left: 100px;
         position: absolute;
-        text-align: center;
+  top: 23vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
     }
-    .homepage-hero-header-text {
 
-        font-size: 20px;
-    }
-    .homepage-hero-tags-c {
-        font-size: 10px;
-    }
-    .homepage-hero-tags-r {
-        font-size: 10px;
-    }
-    .homepage-hero-tags-w {
-        font-size: 10px;
-    }
-    .homepage-hero-tags-d {
-        font-size: 10px;
-    }
+
     .navbar-topnav-img {
         width: 80px;
     }
 
 }
-@media screen and (max-width: 600px) {
 
-    /* .navbar-topnav a:not(:first-child) {
-        display: none;
-    }
-    .navbar-topnav a.navbar-icon {
-        float: right;
-        display: block;
-
-    } */
-}
 @media screen and (max-width: 600px) {
     body {
         overflow-x: hidden;
         margin: 0;
     }
-    /* .navbar-topnav{} */
-    /* .navbar-topnav.responsive {
-        position: relative;
-    }
-    .navbar-topnav.responsive .navbar-icon {
+
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .homepage-hero-div{
         position: absolute;
-        right: 0;
-        background-color: #000000ae;
-        top: 0;
+  top: 25vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
     }
-    .navbar-topnav.responsive a {
-        float: none;
-        /* height: 100%; */
+}
 
-        /* display: block;
-        text-align: left;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .homepage-hero-div{
+        position: absolute;
+  top: 25vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
     }
-     */
+}
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .homepage-hero-div{
+        position: absolute;
+  top: 30vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .homepage-hero-div{
+        position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+    }
 }

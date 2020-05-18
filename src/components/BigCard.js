@@ -12,7 +12,7 @@ function BigCard(props) {
             <Grid item md={6} xs={12}>
                 <div className="big-card-right">
                     <ReactWOW animation='fadeInUp'>
-                        <h6 className="big-card-tagline">{props.tagline}</h6>
+                  <h6 className="big-card-tagline"> {props.tagline}</h6>
                     </ReactWOW>
                     <ReactWOW animation='fadeInUp'>
                         <h1 className="big-card-header">{props.title}</h1>

@@ -15,6 +15,7 @@ import Desc from '../components/Desc';
 import BigCard from '../components/BigCard';
 import Slider from "react-slick";
 import '../assets/css/animate.css';
+import '../assets/css/styles.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 var settings = {
@@ -67,6 +68,8 @@ const IndexPage = ({data}) => (
 <Grid container item md={12} xs={12}>
     <DescHead text={"Big enough to make real impact. Small enough to move fast."}/>
     </Grid>
+    <Grid container item md={12} xs={12}>
+     <hr className="line-art"/>    </Grid>
     <Grid container item md={12} xs={12}>
     <Desc text={"At Neem Consulting we always punch above our weight, challenging bigger competitors on both value and speed. We are big enough to take on the industry's heavy hitters, but small enough to be nimble and flexible - while never scrimping on quality."}/>
    </Grid>
@@ -166,7 +169,7 @@ export const data = graphql`
                     ...GatsbySanityImageFluid
                   }
                 }
-               
+
               }
             }
           }

@@ -1,7 +1,7 @@
 import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
+import {Helmet} from "react-helmet";
 
 
 import Logo from '../assets/media/logowhite.png'
@@ -12,6 +12,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Header = ({siteTitle}) => (
 
     <Navbar className="navbar-topnav"  fixed="top"variant="dark" expand="lg">
+    <Helmet>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        </Helmet>
     <Navbar.Brand><img alt="company-logo"className="navbar-topnav-img" src={Logo}/></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
