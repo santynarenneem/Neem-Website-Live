@@ -18,24 +18,22 @@ body {
     margin: 0;
 }
 
-.line-art{
+.line-art {
 
-        width:15vw;
-          border: 2px solid #DD4027;
-          border-radius: 1px;
+    width: 15vw;
+    border: 2px solid #DD4027;
+    border-radius: 1px;
 
 }
 
-.contact-form-field{
+.contact-form-field {
     width: 100%;
 
-
-
 }
-.contact-form-grid{
+.contact-form-grid {
     margin-top: 10px;
     padding: 10px;
-        margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* Slider CSS*/
@@ -46,7 +44,7 @@ body {
 }
 .slick-dots li button:before {
     color: #DD4027!important;
-   font-size: 15px!important;
+    font-size: 15px!important;
 
 }
 
@@ -80,9 +78,6 @@ body {
 
 /*Homepage Hero Component CSS*/
 
-
-
-
 /* Video Background */
 #homepage-hero-video {
     background: rgba(0, 0, 0, 0.9);
@@ -97,9 +92,9 @@ body {
 
 }
 
-.homepage-hero-div{
+.homepage-hero-div {
     position: absolute;
-    top:50vh;
+    top: 50vh;
     left: 50vw;
     text-align: center;
 
@@ -149,7 +144,7 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'proxima_nova_rgbold' , sans-serif;
-    font-size:2vw;
+    font-size: 2vw;
     margin-bottom: 20px;
     letter-spacing: 20px;
     text-transform: uppercase;
@@ -189,7 +184,6 @@ body {
     width: 5vw;
     margin: 5px;
 
-
 }
 .big-card-content {
     color: #424143;
@@ -205,8 +199,6 @@ body {
     object-fit: cover;
 }
 /*From Hero Css*/
-
-
 
 .hero-small-img {
     width: 100%;
@@ -242,7 +234,7 @@ body {
     font-family: 'proxima_nova_rgbold';
 }
 
-.footer-div-content{
+.footer-div-content {
     padding: 30px;
 }
 /*Header Nav Css*/
@@ -271,7 +263,7 @@ body {
     font-family: 'proxima_nova_rgbold';
     font-size: 17px;
 }
-.navbar-topnav a:not(:first-child) :hover {
+.navbar-topnav a:not(:first-child):hover {
     background-color: #DD4027;
 
 }
@@ -280,7 +272,7 @@ body {
     background-color: #000000ae;
     color: white;
 }
-.navbar-topnav:last-child{
+.navbar-topnav:last-child {
     display: none;
 }
 .navbar-topnav .navbar-icon {
@@ -382,8 +374,7 @@ body {
     height: 100%;
 
 }
-.card-small-img:hover {
-    }
+.card-small-img:hover {}
 .card-small-content-overlay {
     position: absolute;
     top: 0;
@@ -409,13 +400,13 @@ body {
 
 }
 
-.card-line-art{
+.card-line-art {
     border-top: 3px solid #fff;
     width: 5vw;
     bottom: -4vw;
 
-  text-align: left;
-position: absolute;
+    text-align: left;
+    position: absolute;
 
 }
 
@@ -429,9 +420,6 @@ position: absolute;
 }
 
 /*Media Queries*/
-
-
-
 @media only screen and (max-width: 600px) {
 
     #homepage-hero-video {
@@ -446,64 +434,61 @@ position: absolute;
     .desc-big-head-div {
         width: 90%;
     }
-    .homepage-hero-div{
+    .homepage-hero-div {
         position: absolute;
-  top: 23vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+        top: 23vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
     }
-
 
     .navbar-topnav-img {
         width: 80px;
     }
 
 }
-
 @media screen and (max-width: 600px) {
     body {
         overflow-x: hidden;
         margin: 0;
     }
 
-
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .homepage-hero-div{
+    .homepage-hero-div {
         position: absolute;
-  top: 25vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+        top: 25vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .homepage-hero-div{
+    .homepage-hero-div {
         position: absolute;
-  top: 25vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+        top: 25vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .homepage-hero-div{
+    .homepage-hero-div {
         position: absolute;
-  top: 30vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+        top: 30vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .homepage-hero-div{
+    .homepage-hero-div {
         position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
     }
 }
