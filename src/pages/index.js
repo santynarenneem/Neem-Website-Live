@@ -23,7 +23,6 @@ var settings = {
   infinite: false,
   speed: 500,
   arrows:true,
-
   slidesToShow: 3,
   slidesToScroll: 3,
   initialSlide: 0,
@@ -99,7 +98,7 @@ const IndexPage = ({data}) => (
 ))}
 </Grid>
 <Grid item md={12} xs={12}>
-<Slider style={{margin:20}}{...settings}>
+<Slider style={{margin:40}}{...settings}>
 
 
 

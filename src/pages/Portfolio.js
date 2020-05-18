@@ -21,7 +21,7 @@ const Portfolio = ({data , headerData}) => (
 {data.allSanityClient.edges.map(client=>(
     <Grid item md={3}xs={12}>
     <div key={client.node.id} >
-    <Link  to={'/project/'+client.node.slug.current+''}><Card title={client.node.name} img={client.node.image1.asset.fluid}/>
+    <Link  to={'/project/'+client.node.slug.current+''}><Card title={client.node.name} img={client.node.preview.asset.fluid}/>
     </Link>
     <br/>
     </div>
@@ -40,7 +40,7 @@ export const data = graphql`
             node {
                 id
               name
-                image1{
+                preview{
                     asset{
                       fluid(maxWidth: 700) {
                         ...GatsbySanityImageFluid

@@ -9,7 +9,11 @@ const Card = (props) => {
                 <Img className="card-small-img" alt="client_image" fluid={props.img}/>
                 <div className="card-small-content-overlay">
                     <span className="card-small-content">
-                        {props.title}</span>
+                        {props.title}
+                        <hr className="card-line-art"/>
+
+                        </span>
+
                 </div>
 
             </div>

@@ -62,11 +62,11 @@ const Consulting = ({data , headerData}) => (
 <BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.fluid} text={detail.node._rawDescription[0].children[0].text}/>
   </div>
 ))}
-<Slider style={{margin:20}}{...settings}>
+<Slider style={{margin:40}}{...settings}>
 {data.allSanityClient.edges.map(client=>(
 
     <div key={client.node.id} >
-    <Link  to={'/project/'+client.node.slug.current+''}><Card title={client.node.name} img={client.node.image1.asset.fluid}/>
+    <Link  to={'/project/'+client.node.slug.current+''}><Card title={client.node.name} img={client.node.preview.asset.fluid}/>
     </Link>
     <br/>
     </div>
@@ -137,7 +137,7 @@ export const data = graphql`
                 slug{
                   current
                 }
-                  image1{
+                  preview{
                       asset{
                         fluid(maxWidth: 700) {
                           ...GatsbySanityImageFluid

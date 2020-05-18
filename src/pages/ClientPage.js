@@ -4,6 +4,7 @@ import CardMid from '../components/Card'
 import Desc from '../components/Desc'
 import DescHead from '../components/DescHead'
 import { graphql } from 'gatsby'
+import '../assets/css/styles.css';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Grid from '@material-ui/core/Grid';
@@ -17,6 +18,7 @@ function ClientPage({data}) {
         <Header/>
             <HeaderSmallClient text={data.sanityClient.name} breadcrumb={data.sanityClient.name} img={HeaderImage}/>
             <DescHead text={data.sanityClient.name}/>
+            <hr className="line-art"/>
        <Desc text = {data.sanityClient._rawBody[0].children[0].text}/>
             <Grid container >
           <Grid item md={4} xs={12}>

@@ -42,10 +42,12 @@ body {
 .slick-next:before,
 .slick-prev:before {
     color: #DD4027!important;
+
 }
 .slick-dots li button:before {
     color: #DD4027!important;
-    width: 20px!important;
+   font-size: 15px!important;
+
 }
 
 /* Desc Small Component CSS*/
@@ -156,17 +158,20 @@ body {
     font-weight: 500;
     padding-left: 50px;
     padding-right: 50px;
+
     padding-top: 0;
     font-family: 'proxima_nova_rgbold' , sans-serif;
 }
 .big-card-right {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 20px;
 }
 .big-card-tagline {
     color: #DD4027;
     font-size: 20px;
     padding-left: 50px;
+    padding-top: 20px;
     padding-right: 50px;
     font-family: 'proxima_nova_rgbold' , sans-serif;
     font-weight: 500;
@@ -191,6 +196,7 @@ body {
 }
 .big-card-image {
     width: 100%;
+    margin-top: 20px;
     object-fit: cover;
 }
 /*From Hero Css*/
@@ -388,15 +394,23 @@ body {
 
 .card-small-content {
     color: white;
-    font-size: 40px;
+    font-size: 3vw;
     position: absolute;
     font-family: 'proxima_nova_rgbold';
-    top: 70%;
-    left: 30%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+    bottom: 5vw;
+    left: 3vw;
+
+    text-align: left;
+
+}
+
+.card-line-art{
+    border-top: 3px solid #fff;
+    width: 5vw;
+    bottom: -4vw;
+
+  text-align: left;
+position: absolute;
 
 }
 
