@@ -7,7 +7,7 @@ import Card from '../components/Card';
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import CardMid from '../components/CardMid';
-
+import { Toast } from 'react-bootstrap';
 import Grid from '@material-ui/core/Grid';
 import HeaderBig from '../components/HeroBig';
 import DescHead from '../components/DescHead';
@@ -57,6 +57,7 @@ const IndexPage = ({data}) => (
  <Grid container>
  <SEO title="Neem Home" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
  <Header/>
+ 
    <Grid item md={12} xs={12}>    {data.allSanityHeaderBig.edges.map(headersmall=>(
       <div  key={headersmall.node.id}>
 

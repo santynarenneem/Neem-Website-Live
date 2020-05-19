@@ -7,6 +7,7 @@ import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Desc from '../components/Desc';
+import DescHead from '../components/DescHead';
 import '../assets/css/styles.css';
 import ReactWOW from 'react-wow'
 import TextField from '@material-ui/core/TextField';
@@ -27,6 +28,8 @@ const ContactUs = ({data, headerData}) => (
                         img={headersmall.node.headerImage.asset.fluid}/>
                 </div>
             ))}
+            <DescHead text="What can we help you with today?"/>
+            <hr className="line-art"/>
         {data
             .allSanityDetail
             .edges
