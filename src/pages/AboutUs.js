@@ -7,10 +7,16 @@ import HeaderSmall from '../components/HeaderSmall';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import SEO from '../components/seo';
+import { Helmet } from "react-helmet"
 import BigCard from '../components/BigCard';
 const AboutUs = ({data , headerData}) => (
 <div>
 <SEO title="Neem About" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+<Helmet>
+<meta charSet="utf-8" />
+<title>Neem About Us</title>
+
+</Helmet>
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>

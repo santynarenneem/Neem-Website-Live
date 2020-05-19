@@ -8,6 +8,7 @@ import SEO from '../components/seo';
 import HeaderSmall from '../components/HeaderSmall';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { Helmet } from "react-helmet"
 import "slick-carousel/slick/slick-theme.css";
 import BigCard from '../components/BigCard';
 var settings = {
@@ -52,6 +53,11 @@ const Development = ({data , headerData , location}) => (
 {console.log(headerData)}
 {console.log(location)}
 <SEO title="Neem Development" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+<Helmet>
+<meta charSet="utf-8" />
+<title>Neem Development</title>
+
+</Helmet>
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>

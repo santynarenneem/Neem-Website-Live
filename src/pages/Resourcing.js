@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from "gatsby"
 import Header from '../components/header';
 import Footer from '../components/Footer';
-
+import { Helmet } from "react-helmet"
 import Card from '../components/Card';
 
 import HeaderSmall from '../components/HeaderSmall';
@@ -50,6 +50,11 @@ var settings = {
 const Resourcing = ({data , headerData}) => (
 <div>
 <SEO title="Neem Resourcing" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+<Helmet>
+<meta charSet="utf-8" />
+<title>Neem Resourcing</title>
+<link rel="canonical" href="http://mysite.com/example" />
+</Helmet>
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>

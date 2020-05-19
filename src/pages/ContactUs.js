@@ -7,6 +7,7 @@ import HeaderSmallContact from '../components/HeaderSmallContact';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Desc from '../components/Desc';
+import { Helmet } from "react-helmet"
 import DescHead from '../components/DescHead';
 import '../assets/css/styles.css';
 import ReactWOW from 'react-wow'
@@ -16,6 +17,11 @@ import SEO from '../components/seo';
 const ContactUs = ({data, headerData}) => (
     <div>
     <SEO title="Neem Contact" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+    <Helmet>
+    <meta charSet="utf-8" />
+    <title>Neem Contact</title>
+
+  </Helmet>
         <Header/> {data
             .allSanityHeaderSmall
             .edges

@@ -5,12 +5,18 @@ import { Link } from "gatsby"
 import SEO from '../components/seo';
 import Header from '../components/header';
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet"
 import Grid from '@material-ui/core/Grid';
 import HeaderSmall from '../components/HeaderSmall';
 import Desc from '../components/Desc';
 const Portfolio = ({data , headerData}) => (
 <div>
 <SEO title="Neem Client Showcase" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+<Helmet>
+<meta charSet="utf-8" />
+<title>Neem Portfolio</title>
+
+</Helmet>
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
     <HeaderSmall key={headersmall.node.id} text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.fluid}/>

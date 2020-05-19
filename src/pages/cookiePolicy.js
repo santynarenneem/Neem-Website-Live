@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql} from "gatsby"
 import Header from '../components/header';
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet"
 
 
 import HeaderImage from '../assets/media/client-page-header.jpg'
@@ -14,6 +15,11 @@ const cookiePolicy = ({data, headerData}) => (
         <SEO
             title="Neem Cookie Policy"
             keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]}/>
+            <Helmet>
+            <meta charSet="utf-8" />
+            <title>Neem Policy</title>
+           
+          </Helmet>
         <Header/>
 
         <HeaderSmallClient

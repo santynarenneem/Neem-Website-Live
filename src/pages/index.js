@@ -7,6 +7,8 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import CardMid from '../components/CardMid';
 import Grid from '@material-ui/core/Grid';
+import { Helmet } from "react-helmet"
+
 import HeaderBig from '../components/HeroBig';
 import DescHead from '../components/DescHead';
 import Desc from '../components/Desc';
@@ -57,6 +59,11 @@ const IndexPage = ({data}) => (
  <Grid container>
 
  <SEO title="Neem Home" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+ <Helmet>
+ <meta charSet="utf-8" />
+ <title>Neem Home</title>
+ 
+</Helmet>
  <Header/>
 
    <Grid item md={12} xs={12}>    {data.allSanityHeaderBig.edges.map(headersmall=>(

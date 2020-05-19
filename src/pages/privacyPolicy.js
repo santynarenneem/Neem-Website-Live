@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Header from '../components/header';
 import Footer from '../components/Footer';
-
+import { Helmet } from "react-helmet"
 
 import HeaderImage from '../assets/media/client-page-header.jpg'
 import HeaderSmallClient from '../components/HeaderSmallClient';
@@ -13,6 +13,11 @@ const BlockContent = require('@sanity/block-content-to-react')
 const privacyPolicy = ({data , headerData}) => (
 <div>
 <SEO title="Neem Privacy Policy" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+<Helmet>
+<meta charSet="utf-8" />
+<title>Neem Policy</title>
+
+</Helmet>
 <Header/>
 
 

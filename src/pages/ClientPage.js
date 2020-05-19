@@ -6,6 +6,8 @@ import DescHead from '../components/DescHead'
 import { graphql } from 'gatsby'
 import '../assets/css/styles.css';
 import Header from '../components/header';
+import { Helmet } from "react-helmet"
+
 import Footer from '../components/Footer';
 import Grid from '@material-ui/core/Grid';
 import SEO from '../components/seo';
@@ -15,6 +17,11 @@ function ClientPage({data}) {
     return (
         <div>
         <SEO title="Neem Clients" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+        <Helmet>
+        <meta charSet="utf-8" />
+        <title>Neem Clients</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
         <Header/>
             <HeaderSmallClient text={data.sanityClient.name} breadcrumb={data.sanityClient.name} img={HeaderImage}/>
             <DescHead text={data.sanityClient.name}/>

@@ -8,6 +8,7 @@ import Header from '../components/header';
 import HeaderSmall from '../components/HeaderSmall';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { Helmet } from "react-helmet"
 import "slick-carousel/slick/slick-theme.css";
 import BigCard from '../components/BigCard';
 var settings = {
@@ -50,6 +51,11 @@ const Consulting = ({data , headerData}) => (
 
 <div>
 <SEO title="Neem Consulting" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
+<Helmet>
+<meta charSet="utf-8" />
+<title>Neem Consulting</title>
+
+</Helmet>
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
