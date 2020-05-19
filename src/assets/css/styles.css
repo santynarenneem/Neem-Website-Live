@@ -1,20 +1,7 @@
 /* Fonts Used */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-@font-face {
-    font-family: 'proxima_nova_rgregular';
-    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
-    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'), url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'), url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'proxima_nova_rgbold';
-    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
-    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'), url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'), url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 body {
     overflow-x: hidden;
@@ -230,7 +217,7 @@ body {
     color: #424143;
     font-size: 20px;
     padding-top: 30px;
-    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding-left: 50px;
     padding-right: 50px;
 }
