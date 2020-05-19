@@ -61,6 +61,8 @@ module.exports = {
         name: `Neem Consulting Website`,
         short_name: `Neem`,
         start_url: `/`,
+        background_color: `#DD4027`,
+        theme_color: `#DD4027`,
         display: `standalone`,
         icon: `src/assets/media/favicon-1.png`, // This path is relative to the root of the site.
       },
