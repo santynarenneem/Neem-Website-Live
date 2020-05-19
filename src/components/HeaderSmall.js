@@ -10,12 +10,12 @@ function HeaderSmall(props) {
                 <span className="hero-small-content">
 <div className="hero-small-breadcrumb">
 
-                        <Breadcrumb.Item className="hero-small-breadcrumb-item" href="#">Test</Breadcrumb.Item>
+                        <Breadcrumb.Item className="hero-small-breadcrumb-item" >Home</Breadcrumb.Item>
                         <Breadcrumb.Item className="hero-small-breadcrumb-item"
                             >
                             Test
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item className="hero-small-breadcrumb-item" active>Data</Breadcrumb.Item>
+                        <Breadcrumb.Item className="hero-small-breadcrumb-item" active>{props.breadcrumb}</Breadcrumb.Item>
                         </div><br/>
 
                     {props.text}</span>

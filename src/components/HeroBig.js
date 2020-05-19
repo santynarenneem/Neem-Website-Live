@@ -2,26 +2,48 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid';
 import '../assets/css/styles.css';
 import ReactWOW from 'react-wow'
-import Video from '../assets/media/Hop-Software-Gowing-Plan-720p.mp4'
+import VideoFile from '../assets/media/Hop-Software-Gowing-Plan-720p.mp4'
 function HeaderBig(props) {
     return (
         <div>
-            <Grid container>
+            <Grid
+                containe
+                style={{
+                backgroundColor: "#000000"
+            }}>
                 <Grid item md={12} xs={12}>
-                    <video id="homepage-hero-video" autoPlay muted loop>
-                        <source src={Video} xs={12} id="homepage-hero-video-src" type="video/mp4"/>
+                    <video className="homepage-hero-video " autoPlay muted loop>
+                        <source className="homepage-hero-vide-src" src={VideoFile} type="video/mp4"/>
 
                     </video>
-                    <ReactWOW animation='zoomIn'>
-                        <div className="homepage-hero-div">
-                            <span className="homepage-hero-tags-w">We Are</span><br/>
-                            <span className="homepage-hero-header-text">{props.text}</span>
-                            <br/>
-                            <span className="homepage-hero-tags-d">Development</span>
-                            <span className="homepage-hero-tags-c">Consulting</span>
-                            <span className="homepage-hero-tags-r">Resourcing</span>
+
+                    <div className="homepage-hero-div">
+                        <ReactWOW duration="5s" animation='pulse'>
+                            <div>
+
+                                <span className="homepage-hero-tags-w">We Are</span><br/>
+
+                                <span className="homepage-hero-header-text">{props.text}</span>
                             </div>
-                    </ReactWOW>
+                        </ReactWOW>
+
+                        <br/>
+
+                        <ReactWOW animation='fadeInLeft'>
+                            <span className="homepage-hero-tags-d">Development</span>
+                        </ReactWOW>
+
+                        <ReactWOW animation='fadeIn'>
+
+                            <span className="homepage-hero-tags-c">Consulting</span>
+
+                        </ReactWOW>
+                        <ReactWOW animation='fadeInRight'>
+
+                            <span className="homepage-hero-tags-r">Resourcing</span>
+
+                        </ReactWOW>
+                    </div>
 
                 </Grid>
 

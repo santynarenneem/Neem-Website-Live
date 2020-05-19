@@ -102,30 +102,42 @@ body {
 /*Homepage Hero Component CSS*/
 
 /* Video Background */
-#homepage-hero-video {
-    background: rgba(0, 0, 0, 0.9);
+.homepage-hero-video {
+
+    background-color :#000000;
     /* margin-top: -30px; */
     width: 100%;
+    height: 100%;
     position: relative;
     left: 0;
     right: 0;
-    opacity: 0.88;
+    opacity: 0.4;
     bottom: 0;
+
+
+
+
+
+
+
     /* z-index: -1; */
 
 }
+
 
 .homepage-hero-div {
     position: absolute;
     top: 50vh;
     left: 50vw;
-    text-align: center;
+    transform: translate(-50%, -50%);
 
+    text-align: center;
+    padding: 3vw;
     background-repeat: no-repeat;
-    background-size: 16vw;
+    background-size: 20vw;
     background-position-x: center;
     background-image: url("../media/pattern.png");
-    transform: translate(-50%, -50%);
+
 }
 
 .homepage-hero-header-text {
@@ -456,7 +468,7 @@ body {
 /*Media Queries*/
 @media only screen and (max-width: 600px) {
 
-    #homepage-hero-video {
+    .homepage-hero-video {
 
         height: 100%;
         width: 100%;
@@ -488,41 +500,41 @@ body {
 
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
     .homepage-hero-div {
         position: absolute;
         top: 25vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-}
+} */
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
     .homepage-hero-div {
         position: absolute;
         top: 25vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-}
+} */
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
     .homepage-hero-div {
         position: absolute;
         top: 30vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-}
+} */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
     .homepage-hero-div {
         position: absolute;
         top: 50vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-}
+} */

@@ -94,7 +94,7 @@ export const data = graphql`
           }
         }
       },
-        allSanityHeaderSmall(filter: {pageText: {eq: "Client"}}) {
+        allSanityHeaderSmall(filter: {pageText: {eq: "Consulting"}}) {
             edges {
               node {
                 id
