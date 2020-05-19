@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
-import Drift from "react-driftjs";
+
 import {Link} from 'gatsby';
 function Footer() {
     return (
@@ -13,7 +13,7 @@ function Footer() {
 
                             © 2020 Neem Consulting. All rights reserved.
 
-                            <Drift appId="p9hduk27xydr"/>
+                          
                             <Link to="/cookiePolicy">   Cookie Policy</Link>
                             <Link to="/privacyPolicy">   Privacy Policy</Link>
                         </div>
