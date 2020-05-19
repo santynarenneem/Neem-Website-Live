@@ -46,19 +46,22 @@ var settings = {
     }
   ]
 };
-const Development = ({data , headerData}) => (
+const Development = ({data , headerData , location}) => (
 <div>
+
+{console.log(headerData)}
+{console.log(location)}
 <SEO title="Neem Development" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
 <Header/>
 {data.allSanityHeaderSmall.edges.map(headersmall=>(
   <div  key={headersmall.node.id}>
 
-    <HeaderSmall text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.fluid}/>
+    <HeaderSmall loca={location}text={headersmall.node.headerText} breadcrumb={headersmall.node.breadcrumb} img={headersmall.node.headerImage.asset.fluid}/>
     </div>
 ))}
 {data.allSanityDetail.edges.map(detail=>(
   <div key={detail.node.id}>
-<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.fluid} text={detail.node._rawDescription[0].children[0].text}/>
+<BigCard tagline={detail.node.tagline} title={detail.node.headerText} img={detail.node.imageShow.asset.fluid} text={detail.node._rawDescription}/>
   </div>
 ))}
 <Slider style={{margin:40}}{...settings}>

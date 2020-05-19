@@ -80,7 +80,7 @@ body {
 .desc-small-div {
     padding-top: 70px;
     padding-bottom: 70px;
-    width: 40%;
+    width: 80%;
     text-align: center;
 }
 
@@ -241,6 +241,17 @@ body {
     height: 500px;
 
 }
+
+.breadcrumb-item a{
+
+    color: #fff!important;
+    text-decoration: none;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    font-size: 15px;
+    color: #fff;
+   content:">"!important;
+}
 .hero-small-breadcrumb-item{
     display: inline;
     color: #fff!important;
@@ -254,6 +265,18 @@ body {
 }
 
 .hero-small-content {
+
+    position: absolute;
+    bottom: 12vh;
+    left: 4vw;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'proxima_nova_rgbold';
+
+    opacity: 1;
+
+}
+.hero-small-content-contact {
 
     position: absolute;
     top: 50%;
@@ -500,41 +523,41 @@ body {
 
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     .homepage-hero-div {
         position: absolute;
         top: 25vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-} */
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .homepage-hero-div {
         position: absolute;
         top: 25vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-} */
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
     .homepage-hero-div {
         position: absolute;
         top: 30vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-} */
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     .homepage-hero-div {
         position: absolute;
         top: 50vh;
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-} */
+}

@@ -3,7 +3,7 @@ import {graphql} from "gatsby"
 import CardMidContact from '../components/CardContact';
 import Iframe from 'react-iframe'
 import Grid from '@material-ui/core/Grid';
-import HeaderSmall from '../components/HeaderSmall';
+import HeaderSmallContact from '../components/HeaderSmallContact';
 import Header from '../components/header';
 import Footer from '../components/Footer';
 import Desc from '../components/Desc';
@@ -22,7 +22,7 @@ const ContactUs = ({data, headerData}) => (
             .map(headersmall => (
                 <div key={headersmall.node.id}>
 
-                    <HeaderSmall
+                    <HeaderSmallContact
                         text={headersmall.node.headerText}
                         breadcrumb={headersmall.node.breadcrumb}
                         img={headersmall.node.headerImage.asset.fluid}/>

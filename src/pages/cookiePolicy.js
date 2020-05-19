@@ -3,7 +3,7 @@ import {graphql} from "gatsby"
 import Header from '../components/header';
 import Footer from '../components/Footer';
 
-import Card from '../components/Card';
+
 import HeaderImage from '../assets/media/client-page-header.jpg'
 import HeaderSmallClient from '../components/HeaderSmallClient';
 import SEO from '../components/seo';

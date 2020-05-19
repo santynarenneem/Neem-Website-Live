@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import '../assets/css/styles.css';
 import Img from "gatsby-image"
 import ReactWOW from 'react-wow'
+const BlockContent = require('@sanity/block-content-to-react')
 function BigCard(props) {
     return (
         <Grid container>
@@ -18,7 +19,7 @@ function BigCard(props) {
                         <h1 className="big-card-header">{props.title}</h1>
                     </ReactWOW>
                     <ReactWOW animation='fadeInUp'>
-                        <p className="big-card-content">{props.text}</p>
+                        <p className="big-card-content"><BlockContent blocks={props.text}/></p>
                     </ReactWOW>
                 </div>
             </Grid>

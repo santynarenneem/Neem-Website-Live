@@ -6,6 +6,22 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        // defaultCrumb: optional To create a default crumb
+        // see Click Tracking default crumb example below
+        defaultCrumb: {
+          location: {
+            pathname: "/",
+          },
+          crumbLabel: "Home",
+          crumbSeparator: " > ",
+        },
+        // usePathPrefix: optional, if you are using pathPrefix above
+        usePathPrefix: '/blog',
+      }
+    },
 
     {
       resolve: `gatsby-plugin-material-ui`,
