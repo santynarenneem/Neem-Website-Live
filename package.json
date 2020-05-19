@@ -27,6 +27,7 @@
     "react": "^16.13.1",
     "react-animated-css": "^1.2.1",
     "react-bootstrap": "^1.0.1",
+    "react-cookie-consent": "^4.1.0",
     "react-dom": "^16.13.1",
     "react-driftjs": "^1.1.11",
     "react-helmet": "^6.0.0",

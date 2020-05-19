@@ -15,6 +15,7 @@ import Desc from '../components/Desc';
 import BigCard from '../components/BigCard';
 import Slider from "react-slick";
 import '../assets/css/animate.css';
+import CookieConsent from "react-cookie-consent";
 import '../assets/css/styles.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,12 +58,22 @@ var settings = {
 
 const IndexPage = ({data}) => (
  <Grid container>
-
+ <CookieConsent
+ location="bottom"
+ buttonText="ACCEPT"
+ cookieName="viewed_cookie_policy"
+ style={{ background: "#fff" , color:"#000"}}
+ buttonStyle={{ color: "#fff",backgroundColor:"#DD4027", fontSize: "13px" }}
+ expires={150}
+>
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.
+ <Link to="/cookiePolicy">Cookie Policy</Link>
+</CookieConsent>
  <SEO title="Neem Home" keywords={[`Consulting in UK`, `Technology in UK`, `Resourcing in UK`]} />
  <Helmet>
  <meta charSet="utf-8" />
  <title>Neem Home</title>
- 
+
 </Helmet>
  <Header/>
 
